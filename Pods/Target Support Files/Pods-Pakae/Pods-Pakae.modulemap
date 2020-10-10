@@ -1,0 +1,6 @@
+framework module Pods_Pakae {
+  umbrella header "Pods-Pakae-umbrella.h"
+
+  export *
+  module * { export * }
+}

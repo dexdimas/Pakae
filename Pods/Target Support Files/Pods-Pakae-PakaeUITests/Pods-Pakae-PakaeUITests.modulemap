@@ -1,0 +1,6 @@
+framework module Pods_Pakae_PakaeUITests {
+  umbrella header "Pods-Pakae-PakaeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
