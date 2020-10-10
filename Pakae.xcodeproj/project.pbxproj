@@ -101,7 +101,6 @@
 				F58E8C5FD2D89C1B3559DB0E /* Pods-PakaeTests.debug.xcconfig */,
 				02D6FFF6DBFE1D6D704B8134 /* Pods-PakaeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +139,13 @@
 		89673B99253160CF00294010 /* Pakae */ = {
 			isa = PBXGroup;
 			children = (
+				89673BDC2531685400294010 /* Utils */,
+				89673BDB2531684A00294010 /* Services */,
+				89673BDA2531684200294010 /* Extensions */,
+				89673BD32531671700294010 /* Models */,
+				89673BD42531671D00294010 /* View Models */,
+				89673BD62531673A00294010 /* Screens */,
+				89673BD52531673400294010 /* Views */,
 				89673B9A253160CF00294010 /* PakaeApp.swift */,
 				89673B9C253160CF00294010 /* ContentView.swift */,
 				89673B9E253160D000294010 /* Assets.xcassets */,
@@ -175,6 +181,55 @@
 				89673BBE253160D000294010 /* Info.plist */,
 			);
 			path = PakaeUITests;
+			sourceTree = "<group>";
+		};
+		89673BD32531671700294010 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		89673BD42531671D00294010 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		89673BD52531673400294010 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89673BD62531673A00294010 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		89673BDA2531684200294010 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		89673BDB2531684A00294010 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		89673BDC2531685400294010 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,7 +607,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,7 +630,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
