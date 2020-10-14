@@ -24,6 +24,9 @@
 		89673C142531749C00294010 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C132531749C00294010 /* OnboardingScreen.swift */; };
 		89673C19253174C100294010 /* FailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C18253174C100294010 /* FailedView.swift */; };
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
+		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
+		8C6F8E6D25370DA60084DA89 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* WelcomePage.swift */; };
+		8C6F8E7225370DE20084DA89 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* ViewModel.swift */; };
 		FDF5BB8BF4F9D565F3547622 /* Pods_PakaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416696E19666AF5060001433 /* Pods_PakaeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,10 @@
 		89673C0E2531748800294010 /* ViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
 		89673C132531749C00294010 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		89673C18253174C100294010 /* FailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedView.swift; sourceTree = "<group>"; };
+		8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
+		8C6F8E6C25370DA60084DA89 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		8C6F8E7125370DE20084DA89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
 		EF62C1E9690C5DF19BC0FB84 /* Pods-Pakae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.debug.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.debug.xcconfig"; sourceTree = "<group>"; };
 		F58E8C5FD2D89C1B3559DB0E /* Pods-PakaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PakaeTests.debug.xcconfig"; path = "Target Support Files/Pods-PakaeTests/Pods-PakaeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +160,8 @@
 		89673B99253160CF00294010 /* Pakae */ = {
 			isa = PBXGroup;
 			children = (
+				8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */,
+				8C6F8E7625370EDC0084DA89 /* UIKit */,
 				89673BDC2531685400294010 /* Utils */,
 				89673BDB2531684A00294010 /* Services */,
 				89673BDA2531684200294010 /* Extensions */,
@@ -208,6 +217,7 @@
 		89673BD42531671D00294010 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C6F8E7125370DE20084DA89 /* ViewModel.swift */,
 				89673C0E2531748800294010 /* ViewModelBase.swift */,
 			);
 			path = "View Models";
@@ -217,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				89673C18253174C100294010 /* FailedView.swift */,
+				8C6F8E6C25370DA60084DA89 /* WelcomePage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +262,14 @@
 				89673BF72531740E00294010 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C6F8E7625370EDC0084DA89 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,9 +479,12 @@
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
+				8C6F8E7225370DE20084DA89 /* ViewModel.swift in Sources */,
 				89673C19253174C100294010 /* FailedView.swift in Sources */,
 				89673C0A2531745A00294010 /* Account.swift in Sources */,
+				8C6F8E6D25370DA60084DA89 /* WelcomePage.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
+				8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
 				89673C0F2531748800294010 /* ViewModelBase.swift in Sources */,
 			);
@@ -622,9 +644,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -645,9 +668,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
