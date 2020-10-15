@@ -1,5 +1,5 @@
 //
-//  WelcomePage.swift
+//  SignInWithAppleButton.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 14/10/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomePage: View {
+struct SignInWithAppleButton: View {
     
     @ObservedObject var vm = SigninWithAppleViewModel()
     
@@ -44,19 +44,8 @@ struct WelcomePage: View {
                         .padding(7)
                         
                         .frame(width: UIScreen.main.bounds.width*0.9, height: 76)
+                    
                 }
-                
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    
-                    Text("Skip")
-                        
-                        .foregroundColor(.gray)
-                        
-                        .underline()
-                        
-                        .font(.title3)
-                    
-                })
                 
             }
             
@@ -67,16 +56,6 @@ struct WelcomePage: View {
         }
         
         .shadow(color: Color.secondary.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 8)
-        
-    }
-    
-}
-
-struct WelcomePage_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        WelcomePage()
         
     }
     

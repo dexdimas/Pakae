@@ -13,7 +13,7 @@ struct PakaeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            WelcomePage()
+            SignInWithAppleButton()
         }
     }
 }
