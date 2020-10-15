@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  SigninWithAppleViewModel.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 14/10/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ViewModel: ObservableObject{
+final class SigninWithAppleViewModel: ObservableObject{
     private lazy var SignInWithApple = SignInWithAppleCoordinator()
     @Published var user: User?
     

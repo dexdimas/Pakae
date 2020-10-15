@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomePage: View {
-    @ObservedObject var vm = ViewModel()
+    @ObservedObject var vm = SigninWithAppleViewModel()
     var body: some View {
         VStack{
             if vm.user != nil{

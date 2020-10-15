@@ -15,42 +15,37 @@ struct SignInPage: View {
     var body: some View {
         VStack{
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Back")
-                    .offset(x: -170, y: -240)
-            })
+            //Username
+            HStack{
+                Text("Username")
+                Spacer()
+            }
             
-            Text("UserName")
-                .offset(x: -125, y:-90)
             TextField("Insert Username", text:$username)
-                .frame(width: 300, height: 20)
-                .padding()
-                .background(Color.gray)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-                .offset(y: -90)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Text("Password")
-                .offset(x: -125, y:-90)
+            
+            //Password
+            HStack{
+                Text("Password")
+                Spacer()
+            }
             SecureField("Insert Password", text:$username)
-                .frame(width: 300, height: 20)
-                .padding()
-                .background(Color.gray)
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-                .offset(y: -90)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             
+            Spacer()
+            
+            //Button SignIn
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Text("Sign In")
                     .frame(width: 300, height: 20)
-                    .padding()
                     .foregroundColor(.white)
                     .background(Color.red)
                     .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                    .offset(y: 250)
+                
             })
-        }
+            
+        }.padding()
         
         
     }
