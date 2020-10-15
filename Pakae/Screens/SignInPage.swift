@@ -23,7 +23,7 @@ struct SignInPage: View {
             
             Spacer()
             
-            SignInButton()
+            SigninButton()
             
         }
         .padding()
