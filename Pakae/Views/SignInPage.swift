@@ -33,22 +33,23 @@ struct SignInPage: View {
             SecureField("Insert Password", text:$username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
+            
             Spacer()
+            
             
             //Button SignIn
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Text("Sign In")
-                    .frame(width: 300, height: 20)
+                    .frame(width: 350, height: 40)
                     .foregroundColor(.white)
                     .background(Color.red)
-                    .cornerRadius(5.0)
-                
+                    .cornerRadius(10.0)
             })
             
         }.padding()
         
-        
     }
+    
 }
 
 struct SignInPage_Previews: PreviewProvider {
