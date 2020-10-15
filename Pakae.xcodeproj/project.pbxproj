@@ -30,6 +30,8 @@
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
 		8CEF6AED253730B20039002B /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6AEC253730B20039002B /* SignInPage.swift */; };
+		ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75135D253869480073E28E /* PrimaryButtonScreen.swift */; };
+		ED751363253869760073E28E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED751362253869760073E28E /* SignUpScreen.swift */; };
 		FDF5BB8BF4F9D565F3547622 /* Pods_PakaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416696E19666AF5060001433 /* Pods_PakaeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
 		8CEF6AEC253730B20039002B /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
+		ED75135D253869480073E28E /* PrimaryButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonScreen.swift; sourceTree = "<group>"; };
+		ED751362253869760073E28E /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		EF62C1E9690C5DF19BC0FB84 /* Pods-Pakae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.debug.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.debug.xcconfig"; sourceTree = "<group>"; };
 		F58E8C5FD2D89C1B3559DB0E /* Pods-PakaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PakaeTests.debug.xcconfig"; path = "Target Support Files/Pods-PakaeTests/Pods-PakaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +240,7 @@
 				8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */,
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
+				ED75135C253869370073E28E /* Modifier */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			children = (
 				8C616C1025385E40008A41E5 /* WelcomePage.swift */,
 				8CEF6AEC253730B20039002B /* SignInPage.swift */,
+				ED751362253869760073E28E /* SignUpScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -279,6 +285,14 @@
 				8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ED75135C253869370073E28E /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				ED75135D253869480073E28E /* PrimaryButtonScreen.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,8 +497,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
+				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
+				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
