@@ -13,13 +13,9 @@ struct SignInPage: View {
         
         VStack{
             
-            UsernameLabel()
+            UsernameLabelandTextField()
             
-            UsernameTextField()
-            
-            PasswordLabel()
-            
-            PasswordTextField()
+            PasswordLabelandTextField()
             
             Spacer()
             

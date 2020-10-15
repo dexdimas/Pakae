@@ -1,5 +1,5 @@
 //
-//  PasswordLabel.swift
+//  PasswordLabelandTextField.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 15/10/20.
@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct PasswordLabel: View {
+struct PasswordLabelandTextField: View {
+    
+    @State var password: String = ""
     
     var body: some View {
+        
         
         HStack{
             
@@ -18,14 +21,9 @@ struct PasswordLabel: View {
             Spacer()
             
         }
-    }
-}
-
-struct PasswordLabel_Previews: PreviewProvider {
-    
-    static var previews: some View {
         
-        PasswordLabel()
+        SecureField("Insert Password", text:$password)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
         
     }
     

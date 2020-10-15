@@ -1,5 +1,5 @@
 //
-//  UsernameLabel.swift
+//  UsernameLabelandTextField.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 15/10/20.
@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct UsernameLabel: View {
+struct UsernameLabelandTextField: View {
     
+    @State var username: String = ""
+
     var body: some View {
         
         HStack{
@@ -19,15 +21,10 @@ struct UsernameLabel: View {
             
         }
         
-    }
-    
-}
-
-struct UsernameLabel_Previews: PreviewProvider {
-    
-    static var previews: some View {
+        TextField("Insert Username", text:$username)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
         
-        UsernameLabel()
         
     }
+    
 }
