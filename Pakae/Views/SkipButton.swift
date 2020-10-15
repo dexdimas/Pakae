@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInSkipButton: View {
+struct SkipButton: View {
     
     var body: some View {
         

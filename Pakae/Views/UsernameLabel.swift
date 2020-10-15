@@ -1,5 +1,5 @@
 //
-//  WelcomePage.swift
+//  UsernameLabel.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 15/10/20.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct WelcomePage: View {
+struct UsernameLabel: View {
     
     var body: some View {
         
-        VStack{
+        HStack{
             
-            SignInWithAppleButton()
+            Text("Username")
             
-            SkipButton()
+            Spacer()
             
         }
         
@@ -23,12 +23,11 @@ struct WelcomePage: View {
     
 }
 
-struct WelcomePage_Previews: PreviewProvider {
+struct UsernameLabel_Previews: PreviewProvider {
     
     static var previews: some View {
-
-        WelcomePage()
+        
+        UsernameLabel()
         
     }
-    
 }

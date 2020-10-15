@@ -1,5 +1,5 @@
 //
-//  WelcomePage.swift
+//  PasswordLabel.swift
 //  Pakae
 //
 //  Created by Stendy Antonio on 15/10/20.
@@ -7,27 +7,25 @@
 
 import SwiftUI
 
-struct WelcomePage: View {
+struct PasswordLabel: View {
     
     var body: some View {
         
-        VStack{
+        HStack{
             
-            SignInWithAppleButton()
+            Text("Password")
             
-            SkipButton()
+            Spacer()
             
         }
-        
     }
-    
 }
 
-struct WelcomePage_Previews: PreviewProvider {
+struct PasswordLabel_Previews: PreviewProvider {
     
     static var previews: some View {
-
-        WelcomePage()
+        
+        PasswordLabel()
         
     }
     

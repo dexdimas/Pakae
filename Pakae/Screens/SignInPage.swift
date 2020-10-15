@@ -9,35 +9,25 @@ import SwiftUI
 
 struct SignInPage: View {
     
-    @State var username: String = ""
-    
-    @State var password: String = ""
-    
     var body: some View {
         
-        //Username
-        HStack{
+        VStack{
             
-            Text("Username")
+            UsernameLabel()
             
-            Spacer()
+            UsernameTextField()
             
-        }
-        
-        TextField("Insert Username", text:$username)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-        
-        //Password
-        HStack{
+            PasswordLabel()
             
-            Text("Password")
+            PasswordTextField()
             
             Spacer()
             
+            SignInButton()
+            
         }
+        .padding()
         
-        SecureField("Insert Password", text:$username)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
     }
     
 }

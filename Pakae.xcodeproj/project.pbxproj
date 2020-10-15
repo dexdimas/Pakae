@@ -23,7 +23,11 @@
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
 		8C616C0C25385DD6008A41E5 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C0B25385DD6008A41E5 /* SignInButton.swift */; };
 		8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1025385E40008A41E5 /* WelcomePage.swift */; };
-		8C616C1F2538610E008A41E5 /* SignInSkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1E2538610E008A41E5 /* SignInSkipButton.swift */; };
+		8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1E2538610E008A41E5 /* SkipButton.swift */; };
+		8C616C332538624D008A41E5 /* UsernameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C322538624D008A41E5 /* UsernameTextField.swift */; };
+		8C616C3825386289008A41E5 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C3725386289008A41E5 /* PasswordTextField.swift */; };
+		8C616C3D253862D3008A41E5 /* UsernameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C3C253862D3008A41E5 /* UsernameLabel.swift */; };
+		8C616C42253862F1008A41E5 /* PasswordLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C41253862F1008A41E5 /* PasswordLabel.swift */; };
 		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
@@ -75,7 +79,11 @@
 		89673C092531745A00294010 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		8C616C0B25385DD6008A41E5 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInButton.swift; path = ../../../../../../../Applications/SignInButton.swift; sourceTree = "<group>"; };
 		8C616C1025385E40008A41E5 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
-		8C616C1E2538610E008A41E5 /* SignInSkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSkipButton.swift; sourceTree = "<group>"; };
+		8C616C1E2538610E008A41E5 /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
+		8C616C322538624D008A41E5 /* UsernameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameTextField.swift; sourceTree = "<group>"; };
+		8C616C3725386289008A41E5 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		8C616C3C253862D3008A41E5 /* UsernameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabel.swift; sourceTree = "<group>"; };
+		8C616C41253862F1008A41E5 /* PasswordLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLabel.swift; sourceTree = "<group>"; };
 		8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
@@ -228,7 +236,11 @@
 			isa = PBXGroup;
 			children = (
 				8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */,
-				8C616C1E2538610E008A41E5 /* SignInSkipButton.swift */,
+				8C616C1E2538610E008A41E5 /* SkipButton.swift */,
+				8C616C3C253862D3008A41E5 /* UsernameLabel.swift */,
+				8C616C322538624D008A41E5 /* UsernameTextField.swift */,
+				8C616C41253862F1008A41E5 /* PasswordLabel.swift */,
+				8C616C3725386289008A41E5 /* PasswordTextField.swift */,
 				8C616C0B25385DD6008A41E5 /* SignInButton.swift */,
 			);
 			path = Views;
@@ -476,20 +488,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C616C3D253862D3008A41E5 /* UsernameLabel.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
+				8C616C3825386289008A41E5 /* PasswordTextField.swift in Sources */,
 				8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */,
 				89673C0A2531745A00294010 /* Account.swift in Sources */,
 				8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
+				8C616C42253862F1008A41E5 /* PasswordLabel.swift in Sources */,
 				8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */,
+				8C616C332538624D008A41E5 /* UsernameTextField.swift in Sources */,
 				8C616C0C25385DD6008A41E5 /* SignInButton.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
-				8C616C1F2538610E008A41E5 /* SignInSkipButton.swift in Sources */,
+				8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
