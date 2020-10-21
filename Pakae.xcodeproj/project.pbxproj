@@ -33,7 +33,6 @@
 		8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */; };
 		8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* CameraPage.swift */; };
 		8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D925404D4800052D88 /* CustomCameraController.swift */; };
-		8CCEB1F125404EA100052D88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */; };
 		8CEF6AED253730B20039002B /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6AEC253730B20039002B /* SignInPage.swift */; };
 		ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75135D253869480073E28E /* PrimaryButtonScreen.swift */; };
 		ED751363253869760073E28E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED751362253869760073E28E /* SignUpScreen.swift */; };
@@ -95,7 +94,6 @@
 		8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		8CCEB1D425404D4200052D88 /* CameraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
 		8CCEB1D925404D4800052D88 /* CustomCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
-		8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CEF6AEC253730B20039002B /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
 		ED75135D253869480073E28E /* PrimaryButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonScreen.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 				89673B9E253160D000294010 /* Assets.xcassets */,
 				89673BA3253160D000294010 /* Persistence.swift */,
 				89673BA8253160D000294010 /* Info.plist */,
-				8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */,
 				89673BA5253160D000294010 /* Pakae.xcdatamodeld */,
 				89673BA0253160D000294010 /* Preview Content */,
 			);
@@ -420,7 +417,6 @@
 			files = (
 				89673BA2253160D000294010 /* Preview Assets.xcassets in Resources */,
 				89673B9F253160D000294010 /* Assets.xcassets in Resources */,
-				8CCEB1F125404EA100052D88 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,7 +735,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakeni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -763,7 +759,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakeni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

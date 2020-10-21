@@ -10,6 +10,11 @@ import AVFoundation
 import FirebaseStorage
 
 struct CameraPage: View {
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common)
+    
+    private var date = Date()
+    
     @State private var image: Image?
     @State private var showingCustomCamera = false
     @State private var inputImage: UIImage?
@@ -63,15 +68,25 @@ struct CameraPage: View {
         }
         
     }
+    
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        
-        Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("image").putData(inputImage.jpegData(compressionQuality: 0.35)!, metadata: nil){
+                
+        Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(convertdata())").putData(inputImage.jpegData(compressionQuality: 0.35)!, metadata: nil){
             (_, err) in
             if err != nil{
                 return
             }
         }
     }
+    
+    func convertdata() -> String{
+        let formatter = DateFormatter()
+        formatter.timeZone = .current
+        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        
+        return formatter.string(from: self.date)
+    }
+    
 }
