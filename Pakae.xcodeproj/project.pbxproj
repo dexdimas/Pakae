@@ -306,6 +306,7 @@
 				89673B93253160CF00294010 /* Sources */,
 				89673B94253160CF00294010 /* Frameworks */,
 				89673B95253160CF00294010 /* Resources */,
+				92FDC7241F3C64620E287541 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +344,7 @@
 				89673BB4253160D000294010 /* Sources */,
 				89673BB5253160D000294010 /* Frameworks */,
 				89673BB6253160D000294010 /* Resources */,
+				7FEA4FC7645D849A82C38320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,6 +425,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7FEA4FC7645D849A82C38320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92FDC7241F3C64620E287541 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pakae/Pods-Pakae-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pakae/Pods-Pakae-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pakae/Pods-Pakae-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94AD0FEB515CBBC7DAD2E182 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,7 +711,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = RVX7923326;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -683,7 +719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakeni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -699,7 +735,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = RVX7923326;
+				DEVELOPMENT_TEAM = TAYLVU398Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -707,7 +743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakeni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

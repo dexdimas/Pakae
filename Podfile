@@ -6,6 +6,7 @@ target 'Pakae' do
   use_frameworks!
 
   # Pods for Pakae
+  pod 'Firebase/Storage'
 
   target 'PakaeTests' do
     inherit! :search_paths
