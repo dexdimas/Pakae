@@ -29,6 +29,7 @@
 		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
+		8C96436725406F7200C34F5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C96436625406F7200C34F5C /* GoogleService-Info.plist */; };
 		8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */; };
 		8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */; };
 		8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* CameraPage.swift */; };
@@ -90,6 +91,7 @@
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
+		8C96436625406F7200C34F5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureButtonView.swift; sourceTree = "<group>"; };
 		8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		8CCEB1D425404D4200052D88 /* CameraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				89673B9E253160D000294010 /* Assets.xcassets */,
 				89673BA3253160D000294010 /* Persistence.swift */,
 				89673BA8253160D000294010 /* Info.plist */,
+				8C96436625406F7200C34F5C /* GoogleService-Info.plist */,
 				89673BA5253160D000294010 /* Pakae.xcdatamodeld */,
 				89673BA0253160D000294010 /* Preview Content */,
 			);
@@ -417,6 +420,7 @@
 			files = (
 				89673BA2253160D000294010 /* Preview Assets.xcassets in Resources */,
 				89673B9F253160D000294010 /* Assets.xcassets in Resources */,
+				8C96436725406F7200C34F5C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,7 +73,7 @@ struct CameraPage: View {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
                 
-        Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(convertdata())").putData(inputImage.jpegData(compressionQuality: 0.35)!, metadata: nil){
+        Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(convertdata()).jpeg").putData(inputImage.jpegData(compressionQuality: 0.35)!, metadata: nil){
             (_, err) in
             if err != nil{
                 return
