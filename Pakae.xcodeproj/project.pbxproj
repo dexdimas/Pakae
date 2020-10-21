@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,11 @@
 		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
+		8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */; };
+		8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */; };
+		8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* CameraPage.swift */; };
+		8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D925404D4800052D88 /* CustomCameraController.swift */; };
+		8CCEB1F125404EA100052D88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */; };
 		8CEF6AED253730B20039002B /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6AEC253730B20039002B /* SignInPage.swift */; };
 		ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75135D253869480073E28E /* PrimaryButtonScreen.swift */; };
 		ED751363253869760073E28E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED751362253869760073E28E /* SignUpScreen.swift */; };
@@ -86,6 +91,11 @@
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
+		8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureButtonView.swift; sourceTree = "<group>"; };
+		8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		8CCEB1D425404D4200052D88 /* CameraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
+		8CCEB1D925404D4800052D88 /* CustomCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
+		8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CEF6AEC253730B20039002B /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
 		ED75135D253869480073E28E /* PrimaryButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonScreen.swift; sourceTree = "<group>"; };
@@ -184,6 +194,7 @@
 				89673B9E253160D000294010 /* Assets.xcassets */,
 				89673BA3253160D000294010 /* Persistence.swift */,
 				89673BA8253160D000294010 /* Info.plist */,
+				8CCEB1F025404EA100052D88 /* GoogleService-Info.plist */,
 				89673BA5253160D000294010 /* Pakae.xcdatamodeld */,
 				89673BA0253160D000294010 /* Preview Content */,
 			);
@@ -228,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */,
+				8CCEB1D925404D4800052D88 /* CustomCameraController.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -240,6 +252,8 @@
 				8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */,
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
+				8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */,
+				8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */,
 				ED75135C253869370073E28E /* Modifier */,
 			);
 			path = Views;
@@ -251,6 +265,7 @@
 				8C616C1025385E40008A41E5 /* WelcomePage.swift */,
 				8CEF6AEC253730B20039002B /* SignInPage.swift */,
 				ED751362253869760073E28E /* SignUpScreen.swift */,
+				8CCEB1D425404D4200052D88 /* CameraPage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -405,6 +420,7 @@
 			files = (
 				89673BA2253160D000294010 /* Preview Assets.xcassets in Resources */,
 				89673B9F253160D000294010 /* Assets.xcassets in Resources */,
+				8CCEB1F125404EA100052D88 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,8 +548,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
+				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
 				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
+				8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */,
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
@@ -544,6 +563,7 @@
 				8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */,
 				89673C0A2531745A00294010 /* Account.swift in Sources */,
 				8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */,
+				8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
 				8C616C5025386696008A41E5 /* SigninButton.swift in Sources */,
 				8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */,
@@ -711,7 +731,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -735,7 +755,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -802,7 +822,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				INFOPLIST_FILE = PakaeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -823,7 +843,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				INFOPLIST_FILE = PakaeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
