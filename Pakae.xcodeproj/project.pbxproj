@@ -23,6 +23,7 @@
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
 		8C219A5D2541388200FE8292 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C219A5C2541388200FE8292 /* GoogleService-Info.plist */; };
 		8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A612541422B00FE8292 /* CameraInstructionView.swift */; };
+		8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */; };
 		8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1025385E40008A41E5 /* WelcomePage.swift */; };
 		8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1E2538610E008A41E5 /* SkipButton.swift */; };
 		8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */; };
@@ -85,6 +86,7 @@
 		89673C092531745A00294010 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		8C219A5C2541388200FE8292 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
+		8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewCustomButton.swift; sourceTree = "<group>"; };
 		8C616C1025385E40008A41E5 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		8C616C1E2538610E008A41E5 /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
 		8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabelandTextField.swift; sourceTree = "<group>"; };
@@ -254,9 +256,7 @@
 				8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */,
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
-				8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */,
-				8C219A612541422B00FE8292 /* CameraInstructionView.swift */,
-				8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */,
+				8C219A6E254156E100FE8292 /* Camera */,
 				ED75135C253869370073E28E /* Modifier */,
 			);
 			path = Views;
@@ -295,6 +295,17 @@
 				89673BF72531740E00294010 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C219A6E254156E100FE8292 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */,
+				8C219A612541422B00FE8292 /* CameraInstructionView.swift */,
+				8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */,
+				8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		8C6F8E7625370EDC0084DA89 /* UIKit */ = {
@@ -560,6 +571,7 @@
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
+				8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
 				8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */,

@@ -20,17 +20,19 @@ struct CameraPage: View {
     @State private var inputImage: UIImage?
     
     @State private var isPresented = true
-        
+    
     var body: some View {
         
         VStack {
             ZStack {
                 
                 //VIEW 2
-                CustomCameraView(image: self.$inputImage)
+                CustomCameraRepresentable1()
+                Spacer()
+                CameraViewCustomButton()
+                
                 
                 // VIEW 1
-                
                 if image != nil
                 {
                     image?
@@ -44,19 +46,17 @@ struct CameraPage: View {
                         CameraInstructionView().onTapGesture {
                             self.isPresented.toggle()
                             self.showingCustomCamera = true
-                        }
-                    }
+                        }                    }
                     else{
                         Rectangle().fill(Color.black.opacity(0))
+                            .fullScreenCover(isPresented: $showingCustomCamera, onDismiss: loadImage){
+                                CustomCameraView(image: self.$inputImage).edgesIgnoringSafeArea(.all)
+                            }
                     }
                     
                 }
                 
             }
-            
-            //            fullScreenCover(isPresented: $showingCustomCamera, onDismiss: loadImage){
-            //                CustomCameraView(image: self.$inputImage)
-            //            }
         }.edgesIgnoringSafeArea(.all)
     }
     
