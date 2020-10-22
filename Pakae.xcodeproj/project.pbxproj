@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59B5F43704CD8FCCF8DFF37C /* Pods_Pakae_PakaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */; };
+		8936D4392541AF0200070900 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D4382541AF0200070900 /* TabBarPage.swift */; };
 		89673B9B253160CF00294010 /* PakaeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9A253160CF00294010 /* PakaeApp.swift */; };
 		89673B9D253160CF00294010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9C253160CF00294010 /* ContentView.swift */; };
 		89673B9F253160D000294010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89673B9E253160D000294010 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416696E19666AF5060001433 /* Pods_PakaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PakaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae_PakaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8936D4382541AF0200070900 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		89673B97253160CF00294010 /* Pakae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pakae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89673B9A253160CF00294010 /* PakaeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PakaeApp.swift; sourceTree = "<group>"; };
 		89673B9C253160CF00294010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				8CEF6AEC253730B20039002B /* SignInPage.swift */,
 				ED751362253869760073E28E /* SignUpScreen.swift */,
 				8CCEB1D425404D4200052D88 /* TakePicturePage.swift */,
+				8936D4382541AF0200070900 /* TabBarPage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */,
 				8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
+				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
 				8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
 			);
