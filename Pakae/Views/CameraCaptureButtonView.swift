@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CameraCaptureButtonView: View {
+    
     @State private var animationAmount: CGFloat = 1
+    
     var body: some View {
         Image(systemName: "camera").font(.largeTitle)
             .padding(30)
