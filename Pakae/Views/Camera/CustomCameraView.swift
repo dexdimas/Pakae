@@ -22,7 +22,75 @@ struct CustomCameraView: View {
             
             CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
             
-            CameraViewCustomButton()
+            VStack{
+                Spacer()
+                
+                HStack{
+                    
+                    Spacer()
+                    
+                    // BUTTON TOP
+                    Image(systemName: "").font(.largeTitle)
+                        .padding(20)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                    
+                    Spacer()
+                    
+                    // BUTTON SHORT
+                    Image(systemName: "").font(.largeTitle)
+                        .padding(20)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                    
+                    Spacer()
+                    
+                    // BUTTON SHOES
+                    Image(systemName: "").font(.largeTitle)
+                        .padding(20)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                    
+                    Spacer()
+                    
+                }
+                
+                HStack{
+                    
+                    Spacer()
+                    
+                    // BUTTON GALLERY
+                    Image(systemName: "photo").font(.largeTitle)
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                    
+                    Spacer()
+                    
+                    // BUTTON JEPRET
+                    CameraCaptureButtonView().onTapGesture {
+                        self.didTapCapture = true
+                    }
+                    
+                    Spacer()
+                    
+                    // BUTTON ROTATE
+                    Image(systemName: "video").font(.largeTitle)
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                    
+                    Spacer()
+                    
+                }
+                
+                
+            }
             
         }
     }

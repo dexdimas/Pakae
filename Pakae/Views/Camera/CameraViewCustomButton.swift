@@ -17,27 +17,29 @@ struct CameraViewCustomButton: View {
                 Spacer()
                 
                 // BUTTON TOP
-                Button(action: {
-                    //ACTION
-                }) {
-                    Text("Top")
-                }.padding()
+                Image(systemName: "").font(.largeTitle)
+                    .padding(20)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Rectangle())
                 
+                Spacer()
                 
                 // BUTTON SHORT
-                Button(action: {
-                    //ACTION
-                }) {
-                    Text("Short")
-                }.padding()
+                Image(systemName: "").font(.largeTitle)
+                    .padding(20)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Rectangle())
                 
+                Spacer()
                 
                 // BUTTON SHOES
-                Button(action: {
-                    //ACTION
-                }) {
-                    Text("Footwear")
-                }.padding()
+                Image(systemName: "").font(.largeTitle)
+                    .padding(20)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Rectangle())
                 
                 Spacer()
                 
