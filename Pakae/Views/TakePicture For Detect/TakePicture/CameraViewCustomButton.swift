@@ -17,29 +17,31 @@ struct CameraViewCustomButton: View {
                 Spacer()
                 
                 // BUTTON TOP
-                Image(systemName: "").font(.largeTitle)
-                    .padding(20)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(Rectangle())
+                Button(action: {
+                    // your action here
+                }) {
+                    Text("Top")
+                        .foregroundColor(.white)
+                }.offset(y: -25)
                 
-                Spacer()
+                
                 
                 // BUTTON SHORT
-                Image(systemName: "").font(.largeTitle)
-                    .padding(20)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(Rectangle())
+                Button(action: {
+                    // your action here
+                }) {
+                    Text("Short")
+                        .foregroundColor(.white)
+                }.offset(y: -25)
                 
-                Spacer()
                 
                 // BUTTON SHOES
-                Image(systemName: "").font(.largeTitle)
-                    .padding(20)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .clipShape(Rectangle())
+                Button(action: {
+                    // your action here
+                }) {
+                    Text("Footwear")
+                        .foregroundColor(.white)
+                }.offset(y: -25)
                 
                 Spacer()
                 
@@ -55,11 +57,13 @@ struct CameraViewCustomButton: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .clipShape(Rectangle())
+                    .offset(y: -25)
                 
                 Spacer()
                 
                 // BUTTON JEPRET
                 CameraCaptureButtonView()
+                    .offset(y: -25)
                 
                 Spacer()
                 
@@ -69,6 +73,7 @@ struct CameraViewCustomButton: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .clipShape(Rectangle())
+                    .offset(y: -25)
                 
                 Spacer()
                 

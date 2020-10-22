@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 import FirebaseStorage
 
-struct CameraPage: View {
+struct TakePicturePage: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common)
     
@@ -46,10 +46,11 @@ struct CameraPage: View {
                         CameraInstructionView().onTapGesture {
                             self.isPresented.toggle()
                             self.showingCustomCamera = true
-                        }                    }
+                        }
+                    }
                     else{
                         Rectangle().fill(Color.black.opacity(0))
-                            .fullScreenCover(isPresented: $showingCustomCamera, onDismiss: loadImage){
+                            .fullScreenCover(isPresented: $showingCustomCamera){
                                 CustomCameraView(image: self.$inputImage).edgesIgnoringSafeArea(.all)
                             }
                     }
@@ -58,19 +59,6 @@ struct CameraPage: View {
                 
             }
         }.edgesIgnoringSafeArea(.all)
-    }
-    
-    func loadImage() {
-        
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
-        
-        Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(convertdata()).jpeg").putData(inputImage.jpegData(compressionQuality: 0.35)!, metadata: nil){
-            (_, err) in
-            if err != nil{
-                return
-            }
-        }
     }
     
     func convertdata() -> String{

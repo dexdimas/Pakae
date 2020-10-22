@@ -13,6 +13,8 @@ class CustomCameraController: UIViewController {
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
+    var flag = 0
+    
     //DELEGATE
     var delegate: AVCapturePhotoCaptureDelegate?
     

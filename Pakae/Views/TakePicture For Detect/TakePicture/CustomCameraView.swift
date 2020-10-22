@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import FirebaseStorage
 
 struct CustomCameraView: View {
     
@@ -16,6 +17,9 @@ struct CustomCameraView: View {
     
     @State private var animationAmount: CGFloat = 1
     
+    @State var shown = false
+    
+    var flag = 0
     
     var body: some View {
         ZStack(alignment:.bottom){
@@ -30,29 +34,30 @@ struct CustomCameraView: View {
                     Spacer()
                     
                     // BUTTON TOP
-                    Image(systemName: "").font(.largeTitle)
-                        .padding(20)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Rectangle())
+                    Button(action: {
+                        // your action here
+                    }) {
+                        Text("Top")
+                            .foregroundColor(.white)
+                    }.offset(y: -25)
                     
-                    Spacer()
-                    
+
                     // BUTTON SHORT
-                    Image(systemName: "").font(.largeTitle)
-                        .padding(20)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Rectangle())
+                    Button(action: {
+                        // your action here
+                    }) {
+                        Text("Short")
+                            .foregroundColor(.white)
+                    }.offset(y: -25)
                     
-                    Spacer()
                     
                     // BUTTON SHOES
-                    Image(systemName: "").font(.largeTitle)
-                        .padding(20)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Rectangle())
+                    Button(action: {
+                        // your action here
+                    }) {
+                        Text("Footwear")
+                            .foregroundColor(.white)
+                    }.offset(y: -25)
                     
                     Spacer()
                     
@@ -68,13 +73,19 @@ struct CustomCameraView: View {
                         .background(Color.red)
                         .foregroundColor(.white)
                         .clipShape(Rectangle())
+                        .offset(y: -25)
+                        .onTapGesture {
+                            self.shown.toggle()
+                        }.sheet(isPresented: $shown){
+                            imagePicker(shown: $shown)
+                        }
                     
                     Spacer()
                     
                     // BUTTON JEPRET
                     CameraCaptureButtonView().onTapGesture {
                         self.didTapCapture = true
-                    }
+                    }.offset(y: -25)
                     
                     Spacer()
                     
@@ -84,6 +95,10 @@ struct CustomCameraView: View {
                         .background(Color.red)
                         .foregroundColor(.white)
                         .clipShape(Rectangle())
+                        .offset(y: -25)
+                        .onTapGesture {
+                    
+                        }
                     
                     Spacer()
                     
@@ -130,11 +145,17 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
         func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
             
             parent.didTapCapture = false
-            
+                        
             if let imageData = photo.fileDataRepresentation() {
                 parent.image = UIImage(data: imageData)
+                
+                Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(TakePicturePage().convertdata()).jpeg").putData(parent.image!.jpegData(compressionQuality: 0.35)!, metadata: nil){
+                    (_, err) in
+                    if err != nil{
+                        return
+                    }
+                }
             }
-            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
@@ -169,3 +190,5 @@ struct CustomCameraRepresentable1: UIViewControllerRepresentable {
         }
     }
 }
+
+

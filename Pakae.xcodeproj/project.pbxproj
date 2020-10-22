@@ -32,9 +32,10 @@
 		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
+		8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F1592254170D900E1DED9 /* FromGalleryController.swift */; };
 		8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */; };
 		8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */; };
-		8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* CameraPage.swift */; };
+		8CCEB1D525404D4200052D88 /* TakePicturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* TakePicturePage.swift */; };
 		8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D925404D4800052D88 /* CustomCameraController.swift */; };
 		8CEF6AED253730B20039002B /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6AEC253730B20039002B /* SignInPage.swift */; };
 		ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75135D253869480073E28E /* PrimaryButtonScreen.swift */; };
@@ -96,9 +97,10 @@
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
+		8C7F1592254170D900E1DED9 /* FromGalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromGalleryController.swift; sourceTree = "<group>"; };
 		8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureButtonView.swift; sourceTree = "<group>"; };
 		8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
-		8CCEB1D425404D4200052D88 /* CameraPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
+		8CCEB1D425404D4200052D88 /* TakePicturePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePicturePage.swift; sourceTree = "<group>"; };
 		8CCEB1D925404D4800052D88 /* CustomCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraController.swift; sourceTree = "<group>"; };
 		8CEF6AEC253730B20039002B /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */,
 				8CCEB1D925404D4800052D88 /* CustomCameraController.swift */,
+				8C7F1592254170D900E1DED9 /* FromGalleryController.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -256,7 +259,7 @@
 				8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */,
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
-				8C219A6E254156E100FE8292 /* Camera */,
+				8C219A6E254156E100FE8292 /* TakePicture For Detect */,
 				ED75135C253869370073E28E /* Modifier */,
 			);
 			path = Views;
@@ -268,7 +271,7 @@
 				8C616C1025385E40008A41E5 /* WelcomePage.swift */,
 				8CEF6AEC253730B20039002B /* SignInPage.swift */,
 				ED751362253869760073E28E /* SignUpScreen.swift */,
-				8CCEB1D425404D4200052D88 /* CameraPage.swift */,
+				8CCEB1D425404D4200052D88 /* TakePicturePage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -297,15 +300,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		8C219A6E254156E100FE8292 /* Camera */ = {
+		8C219A6E254156E100FE8292 /* TakePicture For Detect */ = {
 			isa = PBXGroup;
 			children = (
-				8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */,
-				8C219A612541422B00FE8292 /* CameraInstructionView.swift */,
-				8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */,
-				8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */,
+				8C219AE725416F4300FE8292 /* TakePicture */,
 			);
-			path = Camera;
+			path = "TakePicture For Detect";
+			sourceTree = "<group>";
+		};
+		8C219AE725416F4300FE8292 /* TakePicture */ = {
+			isa = PBXGroup;
+			children = (
+				8C219A612541422B00FE8292 /* CameraInstructionView.swift */,
+				8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */,
+				8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */,
+				8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */,
+			);
+			path = TakePicture;
 			sourceTree = "<group>";
 		};
 		8C6F8E7625370EDC0084DA89 /* UIKit */ = {
@@ -566,10 +577,11 @@
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
 				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
-				8CCEB1D525404D4200052D88 /* CameraPage.swift in Sources */,
+				8CCEB1D525404D4200052D88 /* TakePicturePage.swift in Sources */,
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
+				8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
 				8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,

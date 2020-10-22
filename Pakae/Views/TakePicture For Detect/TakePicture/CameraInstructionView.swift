@@ -20,10 +20,17 @@ struct CameraInstructionView: View {
                 
                 .multilineTextAlignment(.center)
                 
+                .font(Font.system(size: 18))
+                
                 .lineLimit(2)
                 
                 .padding(10)
             
+            Text("Tap for dismiss")
+                
+                .multilineTextAlignment(.center)
+                
+                .font(Font.system(size: 10))
         }
         .padding(28)
 
