@@ -28,3 +28,9 @@ struct PasswordLabelandTextField: View {
     }
     
 }
+
+struct PasswordLabelandTextField_Previews: PreviewProvider {
+    static var previews: some View {
+       PasswordLabelandTextField()
+    }
+}

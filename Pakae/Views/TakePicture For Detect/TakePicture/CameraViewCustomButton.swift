@@ -24,8 +24,6 @@ struct CameraViewCustomButton: View {
                         .foregroundColor(.white)
                 }.offset(y: -25)
                 
-                
-                
                 // BUTTON SHORT
                 Button(action: {
                     // your action here
@@ -45,7 +43,7 @@ struct CameraViewCustomButton: View {
                 
                 Spacer()
                 
-            }
+            }.offset(x: 15, y: -20)
             
             HStack{
                 

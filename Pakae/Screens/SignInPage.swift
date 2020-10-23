@@ -15,7 +15,11 @@ struct SignInPage: View {
             
             UsernameLabelandTextField()
             
+//            MustContainsEmailLabel()
+            
             PasswordLabelandTextField()
+            
+//            PasswordLessThanLabel()
             
             Spacer()
             

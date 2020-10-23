@@ -55,7 +55,12 @@ class CustomCameraController: UIViewController {
             }
         }
         
-        self.currentCamera = self.backCamera
+        if flag == 0{
+            self.currentCamera = self.backCamera
+        }
+        else if flag == 1 {
+            self.currentCamera = self.frontCamera
+        }
     }
     
     

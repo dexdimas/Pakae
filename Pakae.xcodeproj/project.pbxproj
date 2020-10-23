@@ -30,10 +30,16 @@
 		8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */; };
 		8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */; };
 		8C616C5025386696008A41E5 /* SigninButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C4F25386696008A41E5 /* SigninButton.swift */; };
+		8C6DBEAB2542C7490023BB86 /* MustContainsEmailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DBEAA2542C7490023BB86 /* MustContainsEmailLabel.swift */; };
+		8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */; };
 		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
 		8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F1592254170D900E1DED9 /* FromGalleryController.swift */; };
+		8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */; };
+		8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */; };
+		8C92859A2542ED6300776BB8 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285972542ED6300776BB8 /* OnboardingStepView.swift */; };
+		8C9285A82542EE2B00776BB8 /* OnBoardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */; };
 		8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */; };
 		8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */; };
 		8CCEB1D525404D4200052D88 /* TakePicturePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D425404D4200052D88 /* TakePicturePage.swift */; };
@@ -95,11 +101,17 @@
 		8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabelandTextField.swift; sourceTree = "<group>"; };
 		8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLabelandTextField.swift; sourceTree = "<group>"; };
 		8C616C4F25386696008A41E5 /* SigninButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninButton.swift; sourceTree = "<group>"; };
+		8C6DBEAA2542C7490023BB86 /* MustContainsEmailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustContainsEmailLabel.swift; sourceTree = "<group>"; };
+		8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLessThanLabel.swift; sourceTree = "<group>"; };
 		8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
 		8C7F1592254170D900E1DED9 /* FromGalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromGalleryController.swift; sourceTree = "<group>"; };
+		8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
+		8C9285972542ED6300776BB8 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContentView.swift; sourceTree = "<group>"; };
 		8CCEB1CA25404D3400052D88 /* CameraCaptureButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureButtonView.swift; sourceTree = "<group>"; };
 		8CCEB1CF25404D3900052D88 /* CustomCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		8CCEB1D425404D4200052D88 /* TakePicturePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePicturePage.swift; sourceTree = "<group>"; };
@@ -239,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				89673C092531745A00294010 /* Account.swift */,
+				8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,10 +269,14 @@
 		89673BD52531673400294010 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C9285972542ED6300776BB8 /* OnboardingStepView.swift */,
+				8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */,
 				8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */,
 				8C616C1E2538610E008A41E5 /* SkipButton.swift */,
 				8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */,
+				8C6DBEAA2542C7490023BB86 /* MustContainsEmailLabel.swift */,
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
+				8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
 				8C219A6E254156E100FE8292 /* TakePicture For Detect */,
 				ED75135C253869370073E28E /* Modifier */,
@@ -275,6 +292,7 @@
 				ED751362253869760073E28E /* SignUpScreen.swift */,
 				8CCEB1D425404D4200052D88 /* TakePicturePage.swift */,
 				8936D4382541AF0200070900 /* TabBarPage.swift */,
+				8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -576,8 +594,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
+				8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
 				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
 				8CCEB1D525404D4200052D88 /* TakePicturePage.swift in Sources */,
@@ -587,12 +607,14 @@
 				8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */,
 				89673C052531744600294010 /* View+Extensions.swift in Sources */,
 				8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */,
+				8C92859A2542ED6300776BB8 /* OnboardingStepView.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
 				8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */,
 				8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */,
 				89673C0A2531745A00294010 /* Account.swift in Sources */,
 				8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */,
+				8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */,
 				8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
 				8C616C5025386696008A41E5 /* SigninButton.swift in Sources */,
@@ -603,6 +625,8 @@
 				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
 				8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
+				8C9285A82542EE2B00776BB8 /* OnBoardingContentView.swift in Sources */,
+				8C6DBEAB2542C7490023BB86 /* MustContainsEmailLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,7 +787,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -771,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.Pakeni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -787,7 +811,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = TAYLVU398Z;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -795,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.Pakeni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

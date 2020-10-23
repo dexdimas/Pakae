@@ -19,6 +19,10 @@ struct CustomCameraView: View {
     
     @State var shown = false
     
+    @State private var didTap:Bool = false
+    @State private var didTap1:Bool = false
+    @State private var didTap2:Bool = false
+
     var flag = 0
     
     var body: some View {
@@ -35,33 +39,42 @@ struct CustomCameraView: View {
                     
                     // BUTTON TOP
                     Button(action: {
-                        // your action here
+                        self.didTap = true
+                        self.didTap1 = false
+                        self.didTap2 = false
                     }) {
                         Text("Top")
-                            .foregroundColor(.white)
-                    }.offset(y: -25)
+                    }
+                    .foregroundColor(didTap ? Color.red : Color.white)
+                    .offset(y: -25)
                     
-
+                    
                     // BUTTON SHORT
                     Button(action: {
-                        // your action here
+                        self.didTap = false
+                        self.didTap1 = true
+                        self.didTap2 = false
                     }) {
                         Text("Short")
-                            .foregroundColor(.white)
-                    }.offset(y: -25)
+                    }
+                    .foregroundColor(didTap1 ? Color.red : Color.white)
+                    .offset(y: -25)
                     
                     
                     // BUTTON SHOES
                     Button(action: {
-                        // your action here
+                        self.didTap = false
+                        self.didTap1 = false
+                        self.didTap2 = true
                     }) {
                         Text("Footwear")
-                            .foregroundColor(.white)
-                    }.offset(y: -25)
+                    }
+                    .foregroundColor(didTap2 ? Color.red : Color.white)
+                    .offset(y: -25)
                     
                     Spacer()
                     
-                }
+                }.offset(x: 15, y: -20)
                 
                 HStack{
                     
@@ -97,7 +110,7 @@ struct CustomCameraView: View {
                         .clipShape(Rectangle())
                         .offset(y: -25)
                         .onTapGesture {
-                    
+                            CustomCameraController().setupDevice()
                         }
                     
                     Spacer()
@@ -145,7 +158,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
         func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
             
             parent.didTapCapture = false
-                        
+            
             if let imageData = photo.fileDataRepresentation() {
                 parent.image = UIImage(data: imageData)
                 
@@ -192,3 +205,9 @@ struct CustomCameraRepresentable1: UIViewControllerRepresentable {
 }
 
 
+
+struct CustomCameraView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

@@ -16,7 +16,7 @@ struct PakaeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TakePicturePage()
+            OnBoardingContentView()
         }
     }
 }
