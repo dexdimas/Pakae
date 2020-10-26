@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D0FBDF32546C01400E4789C /* ReferencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FBDF22546C01400E4789C /* ReferencePage.swift */; };
 		2D0FBDF82546C02800E4789C /* ContentReferencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */; };
-		2D9D84FE2546CB0800BFAF52 /* StyleAndCloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D84FD2546CB0800BFAF52 /* StyleAndCloth.swift */; };
+		2DD2DAEA2546CE0900F105B9 /* ShopTheLookPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */; };
 		59B5F43704CD8FCCF8DFF37C /* Pods_Pakae_PakaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */; };
 		8936D4392541AF0200070900 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D4382541AF0200070900 /* TabBarPage.swift */; };
 		89673B9B253160CF00294010 /* PakaeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9A253160CF00294010 /* PakaeApp.swift */; };
@@ -76,7 +76,7 @@
 		263ED28431221E5B3E021171 /* Pods-Pakae-PakaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae-PakaeUITests.release.xcconfig"; path = "Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2D0FBDF22546C01400E4789C /* ReferencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencePage.swift; sourceTree = "<group>"; };
 		2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentReferencePage.swift; sourceTree = "<group>"; };
-		2D9D84FD2546CB0800BFAF52 /* StyleAndCloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAndCloth.swift; sourceTree = "<group>"; };
+		2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTheLookPage.swift; sourceTree = "<group>"; };
 		33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416696E19666AF5060001433 /* Pods_PakaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PakaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae_PakaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,7 +258,6 @@
 			children = (
 				89673C092531745A00294010 /* Account.swift */,
 				8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */,
-				2D9D84FD2546CB0800BFAF52 /* StyleAndCloth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +301,7 @@
 				8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */,
 				2D0FBDF22546C01400E4789C /* ReferencePage.swift */,
 				2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */,
+				2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -607,7 +607,6 @@
 				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
-				2D9D84FE2546CB0800BFAF52 /* StyleAndCloth.swift in Sources */,
 				8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
 				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
@@ -621,6 +620,7 @@
 				8C92859A2542ED6300776BB8 /* OnboardingStepView.swift in Sources */,
 				89673BA4253160D000294010 /* Persistence.swift in Sources */,
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
+				2DD2DAEA2546CE0900F105B9 /* ShopTheLookPage.swift in Sources */,
 				8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */,
 				8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */,
 				89673C0A2531745A00294010 /* Account.swift in Sources */,

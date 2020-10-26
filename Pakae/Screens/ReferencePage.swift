@@ -12,18 +12,23 @@ struct ReferencePage: View {
     @State var selected = 0
     
     var body: some View {
-        VStack {
-            Text("Rerefence").font(.title)
-            if self.selected == 0 {
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        Spacer()
-                        ContentReferencePage()
-                    }.padding()
+        NavigationView{
+            VStack {
+                Text("Rerefence").font(.title)
+                if self.selected == 0 {
+                    NavigationLink(
+                        destination: ShopTheLookPage(),
+                        isActive: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/,
+                        label: {
+                            ScrollView(.vertical, showsIndicators: false) {
+                                VStack {
+                                    Spacer()
+                                    ContentReferencePage()
+                                }.padding()
+                            }
+                        })
                 }
             }
-        }.onTapGesture {
-            print("BISA DONG BISA")
         }
     }
 }
