@@ -37,13 +37,13 @@ struct SignInWithAppleButton: View {
                     
                     AppleIdButton()
                         
-                        .background(Color.primary)
+                        .frame(width: 350, height: 40)
                         
-                        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                        .foregroundColor(.white)
                         
-                        .padding(7)
+                        .background(Color.red)
                         
-                        .frame(width: UIScreen.main.bounds.width*0.9, height: 76)
+                        .cornerRadius(10.0)
                     
                 }
                 

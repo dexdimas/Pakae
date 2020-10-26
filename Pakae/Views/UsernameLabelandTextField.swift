@@ -23,15 +23,13 @@ struct UsernameLabelandTextField: View {
             
         }
         
-        TextField("email...", text: $textEmail, onEditingChanged: { (isChanged) in
+        TextField("Email", text: $textEmail, onEditingChanged: { (isChanged) in
             if !isChanged {
                 if self.textFieldValidatorEmail(self.textEmail) {
                     self.isEmailValid = true
                 } else {
                     self.isEmailValid = false
                     self.textEmail = ""
-                    
-                    
                 }
             }
         }).textFieldStyle(RoundedBorderTextFieldStyle())
