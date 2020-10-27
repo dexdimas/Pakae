@@ -12,7 +12,7 @@ struct SigninButton: View {
         //Button SignIn
         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
             
-            Text("Sign In / MASUK WOI")
+            Text("Sign In")
                 
                 .frame(width: 350, height: 40)
                 
