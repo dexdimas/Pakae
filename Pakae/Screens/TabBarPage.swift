@@ -20,7 +20,7 @@ struct TabBarPage: View {
                     Image(systemName: "bookmark.fill")
                     Text("Favorite")
                 }
-            SignUpScreen()
+            SignUpPage()
                 .tabItem {
                     Image(systemName: "cloud.fill")
                     Text("Inspiration")

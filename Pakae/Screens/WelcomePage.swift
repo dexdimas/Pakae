@@ -30,20 +30,26 @@ struct WelcomePage: View {
             
             .padding()
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Sign Up")
-            })
-            .frame(width: 350, height: 40)
-            
-            .foregroundColor(.red)
-            
-            .border(Color.red, width: 1)
-            
-            .cornerRadius(10.0)
-            
-            .shadow(color: Color.secondary.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 8)
+            NavigationLink(
+                destination: SignUpPage(),
+                label: {
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Text("Sign Up")
+                    })
+                    .frame(width: 350, height: 40)
+                    
+                    .foregroundColor(.red)
+                    
+                    .border(Color.red, width: 1)
+                    
+                    .cornerRadius(10.0)
+                    
+                    .shadow(color: Color.secondary.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 8)
 
-            .padding()
+                    .padding()
+                    
+                })
             
             SignInWithAppleButton()
                 
@@ -53,6 +59,7 @@ struct WelcomePage: View {
                 .padding()
             
         }
+        .embedNavigationView()
         
     }
     

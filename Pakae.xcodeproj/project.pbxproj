@@ -12,6 +12,8 @@
 		2DD2DAEA2546CE0900F105B9 /* ShopTheLookPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */; };
 		59B5F43704CD8FCCF8DFF37C /* Pods_Pakae_PakaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */; };
 		8936D4392541AF0200070900 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D4382541AF0200070900 /* TabBarPage.swift */; };
+		8952757D2547A90500D897BE /* WardrobePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8952757C2547A90500D897BE /* WardrobePage.swift */; };
+		895275822547AB2600D897BE /* WardrobeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895275812547AB2600D897BE /* WardrobeListView.swift */; };
 		89673B9B253160CF00294010 /* PakaeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9A253160CF00294010 /* PakaeApp.swift */; };
 		89673B9D253160CF00294010 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9C253160CF00294010 /* ContentView.swift */; };
 		89673B9F253160D000294010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89673B9E253160D000294010 /* Assets.xcassets */; };
@@ -50,7 +52,7 @@
 		8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEB1D925404D4800052D88 /* CustomCameraController.swift */; };
 		8CEF6AED253730B20039002B /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF6AEC253730B20039002B /* SignInPage.swift */; };
 		ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75135D253869480073E28E /* PrimaryButtonScreen.swift */; };
-		ED751363253869760073E28E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED751362253869760073E28E /* SignUpScreen.swift */; };
+		ED751363253869760073E28E /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED751362253869760073E28E /* SignUpPage.swift */; };
 		FDF5BB8BF4F9D565F3547622 /* Pods_PakaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416696E19666AF5060001433 /* Pods_PakaeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		416696E19666AF5060001433 /* Pods_PakaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PakaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae_PakaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8936D4382541AF0200070900 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		8952757C2547A90500D897BE /* WardrobePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobePage.swift; sourceTree = "<group>"; };
+		895275812547AB2600D897BE /* WardrobeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeListView.swift; sourceTree = "<group>"; };
 		89673B97253160CF00294010 /* Pakae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pakae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89673B9A253160CF00294010 /* PakaeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PakaeApp.swift; sourceTree = "<group>"; };
 		89673B9C253160CF00294010 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,7 +131,7 @@
 		8CEF6AEC253730B20039002B /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		E093CF6D2A5B8E9AA0C22C09 /* Pods-Pakae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.release.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.release.xcconfig"; sourceTree = "<group>"; };
 		ED75135D253869480073E28E /* PrimaryButtonScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonScreen.swift; sourceTree = "<group>"; };
-		ED751362253869760073E28E /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		ED751362253869760073E28E /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		EF62C1E9690C5DF19BC0FB84 /* Pods-Pakae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae.debug.xcconfig"; path = "Target Support Files/Pods-Pakae/Pods-Pakae.debug.xcconfig"; sourceTree = "<group>"; };
 		F58E8C5FD2D89C1B3559DB0E /* Pods-PakaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PakaeTests.debug.xcconfig"; path = "Target Support Files/Pods-PakaeTests/Pods-PakaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +290,7 @@
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
+				895275812547AB2600D897BE /* WardrobeListView.swift */,
 				8C219A6E254156E100FE8292 /* TakePicture For Detect */,
 				ED75135C253869370073E28E /* Modifier */,
 			);
@@ -297,7 +302,7 @@
 			children = (
 				8C616C1025385E40008A41E5 /* WelcomePage.swift */,
 				8CEF6AEC253730B20039002B /* SignInPage.swift */,
-				ED751362253869760073E28E /* SignUpScreen.swift */,
+				ED751362253869760073E28E /* SignUpPage.swift */,
 				8CCEB1D425404D4200052D88 /* TakePicturePage.swift */,
 				8936D4382541AF0200070900 /* TabBarPage.swift */,
 				8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */,
@@ -305,6 +310,7 @@
 				2D0FBDF22546C01400E4789C /* ReferencePage.swift */,
 				2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */,
 				2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */,
+				8952757C2547A90500D897BE /* WardrobePage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -608,11 +614,12 @@
 			files = (
 				2D0FBDF82546C02800E4789C /* ContentReferencePage.swift in Sources */,
 				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
+				8952757D2547A90500D897BE /* WardrobePage.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
 				8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
-				ED751363253869760073E28E /* SignUpScreen.swift in Sources */,
+				ED751363253869760073E28E /* SignUpPage.swift in Sources */,
 				8CCEB1D525404D4200052D88 /* TakePicturePage.swift in Sources */,
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
@@ -638,6 +645,7 @@
 				8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */,
 				8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
+				895275822547AB2600D897BE /* WardrobeListView.swift in Sources */,
 				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
 				8C616C1F2538610E008A41E5 /* SkipButton.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,

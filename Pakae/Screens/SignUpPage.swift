@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpScreen: View {
+struct SignUpPage: View {
     
     @State var fullName: String = ""
     @State var email: String = ""
@@ -69,8 +69,8 @@ struct SignUpScreen: View {
     }
 }
 
-struct SignUpScreen_Previews: PreviewProvider {
+struct SignUpPage_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpScreen()
+        SignUpPage()
     }
 }
