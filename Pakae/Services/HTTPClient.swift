@@ -63,7 +63,7 @@ class HTTPClient : ObservableObject{
     }
     
     func cekLogin(password: String, email: String){
-        guard let url = URL(string: "http://klopp-v1.ap-southeast-1.elasticbeanstalk.com/api/v1/auth/user-sign-in") else{
+        guard let url = URL(string: "18.140.3.202:8080/api/v1/auth/user-sign-in") else{
             return
         }
                 

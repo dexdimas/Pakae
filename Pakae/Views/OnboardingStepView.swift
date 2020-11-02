@@ -5,10 +5,6 @@ struct OnboardingStepView: View {
     
     var body: some View {
         VStack {
-            Image(data.image)
-                .resizable()
-                .scaledToFit()
-                .padding(.bottom, 50)
             
             Text(data.heading)
                 .font(.system(size: 25, design: .rounded))
@@ -19,6 +15,9 @@ struct OnboardingStepView: View {
                 .font(.system(size: 17, design: .rounded))
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
+                .frame(width: 300)
+                .foregroundColor(.gray)
+
         }
     .padding()
     }
