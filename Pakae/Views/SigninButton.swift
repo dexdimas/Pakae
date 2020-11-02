@@ -10,7 +10,9 @@ import SwiftUI
 struct SigninButton: View {
     var body: some View {
         //Button SignIn
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: {
+            
+        }, label: {
             
             Text("Sign In")
                 

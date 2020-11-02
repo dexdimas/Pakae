@@ -40,7 +40,8 @@ final class SignInWithAppleCoordinator: NSObject {
                 fatalError()
             }
             
-            let user = User(fullName: fullName ?? "notprovided", email: email ?? "notprovided", authState: authState ?? "unknown")
+            let user = User(fullName: fullName ?? "notprovided", email: email ?? "notprovided", authState: authState ?? "unknown", credentialid: userId)
+            
             if let userEncode = try? JSONEncoder().encode(user){
                 UserDefaults.standard.set(userEncode, forKey: "user")
             }
@@ -52,8 +53,8 @@ extension SignInWithAppleCoordinator: ASAuthorizationControllerDelegate{
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let credential = authorization.credential as? ASAuthorizationAppleIDCredential{
-            let fullName = (credential.fullName?.givenName)! + " " + (credential.fullName?.familyName)!
-            setUserInfo(for: credential.user, fullName: fullName, email: credential.email)
+//            let fullName = (credential.fullName?.givenName)! + " " + (credential.fullName?.familyName)!
+            setUserInfo(for: credential.user, fullName: credential.fullName?.familyName, email: credential.email)
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {

@@ -78,6 +78,7 @@ class CustomCameraController: UIViewController {
         }
         
     }
+    
     func setupPreviewLayer()
     {
         self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -87,6 +88,7 @@ class CustomCameraController: UIViewController {
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
         
     }
+    
     func startRunningCaptureSession(){
         captureSession.startRunning()
     }

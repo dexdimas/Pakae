@@ -20,7 +20,7 @@
 		89673BF82531740E00294010 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673BF72531740E00294010 /* Constants.swift */; };
 		89673C002531742400294010 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673BFF2531742400294010 /* HTTPClient.swift */; };
 		89673C052531744600294010 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C042531744600294010 /* View+Extensions.swift */; };
-		89673C0A2531745A00294010 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C092531745A00294010 /* Account.swift */; };
+		89673C0A2531745A00294010 /* UserSignInWithAppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C092531745A00294010 /* UserSignInWithAppleModel.swift */; };
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
 		8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */; };
 		8C219A5D2541388200FE8292 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C219A5C2541388200FE8292 /* GoogleService-Info.plist */; };
@@ -33,10 +33,11 @@
 		8C616C5025386696008A41E5 /* SigninButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C4F25386696008A41E5 /* SigninButton.swift */; };
 		8C6DBEAB2542C7490023BB86 /* MustContainsEmailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DBEAA2542C7490023BB86 /* MustContainsEmailLabel.swift */; };
 		8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */; };
-		8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */; };
+		8C6F8E612536FD170084DA89 /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E602536FD170084DA89 /* SignInWithAppleCoordinator.swift */; };
 		8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */; };
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
 		8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F1592254170D900E1DED9 /* FromGalleryController.swift */; };
+		8C8A014C254AC0CB00C95F04 /* UserSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */; };
 		8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */; };
 		8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */; };
 		8C92859A2542ED6300776BB8 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285972542ED6300776BB8 /* OnboardingStepView.swift */; };
@@ -93,7 +94,7 @@
 		89673BF72531740E00294010 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89673BFF2531742400294010 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		89673C042531744600294010 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		89673C092531745A00294010 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		89673C092531745A00294010 /* UserSignInWithAppleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInWithAppleModel.swift; sourceTree = "<group>"; };
 		8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationPage.swift; sourceTree = "<group>"; };
 		8C219A5C2541388200FE8292 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
@@ -105,11 +106,12 @@
 		8C616C4F25386696008A41E5 /* SigninButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninButton.swift; sourceTree = "<group>"; };
 		8C6DBEAA2542C7490023BB86 /* MustContainsEmailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustContainsEmailLabel.swift; sourceTree = "<group>"; };
 		8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLessThanLabel.swift; sourceTree = "<group>"; };
-		8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleController.swift; sourceTree = "<group>"; };
+		8C6F8E602536FD170084DA89 /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
 		8C6F8E6C25370DA60084DA89 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWithAppleViewModel.swift; sourceTree = "<group>"; };
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
 		8C7F1592254170D900E1DED9 /* FromGalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromGalleryController.swift; sourceTree = "<group>"; };
+		8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInModel.swift; sourceTree = "<group>"; };
 		8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
 		8C9285972542ED6300776BB8 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
@@ -252,7 +254,8 @@
 		89673BD32531671700294010 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				89673C092531745A00294010 /* Account.swift */,
+				8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */,
+				89673C092531745A00294010 /* UserSignInWithAppleModel.swift */,
 				8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */,
 			);
 			path = Models;
@@ -346,7 +349,7 @@
 		8C6F8E7625370EDC0084DA89 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				8C6F8E602536FD170084DA89 /* SignInWithAppleController.swift */,
+				8C6F8E602536FD170084DA89 /* SignInWithAppleCoordinator.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			files = (
 				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
+				8C8A014C254AC0CB00C95F04 /* UserSignInModel.swift in Sources */,
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
 				8C6DBEB32542C75D0023BB86 /* PasswordLessThanLabel.swift in Sources */,
 				89673BF82531740E00294010 /* Constants.swift in Sources */,
@@ -615,14 +619,14 @@
 				8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */,
 				8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */,
 				8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */,
-				89673C0A2531745A00294010 /* Account.swift in Sources */,
+				89673C0A2531745A00294010 /* UserSignInWithAppleModel.swift in Sources */,
 				8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */,
 				8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */,
 				8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
 				8C616C5025386696008A41E5 /* SigninButton.swift in Sources */,
 				8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */,
-				8C6F8E612536FD170084DA89 /* SignInWithAppleController.swift in Sources */,
+				8C6F8E612536FD170084DA89 /* SignInWithAppleCoordinator.swift in Sources */,
 				8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */,
 				8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,

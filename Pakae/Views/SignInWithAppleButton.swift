@@ -25,6 +25,8 @@ struct SignInWithAppleButton: View {
                     
                     Text("auth State\n\(vm.user!.authState)")
                         
+                    Text("ID : \(vm.user!.credentialid)")
+                        
                         .foregroundColor(vm.user?.authState == "authorized" ? .green : .primary)
                     
                 }.padding(.horizontal)

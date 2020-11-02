@@ -9,6 +9,6 @@ import Foundation
 
 struct User: Codable {
     
-    let fullName, email, authState: String
+    let fullName, email, authState, credentialid: String
     
 }
