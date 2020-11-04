@@ -815,7 +815,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UM9U6CWFS;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -823,7 +823,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.evan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -839,7 +839,7 @@
 				CODE_SIGN_ENTITLEMENTS = Pakae/Pakae.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Pakae/Preview Content\"";
-				DEVELOPMENT_TEAM = 7UM9U6CWFS;
+				DEVELOPMENT_TEAM = RVX7923326;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Pakae/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -847,7 +847,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.evan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haludev.Pakae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

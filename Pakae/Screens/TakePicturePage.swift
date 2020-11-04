@@ -64,7 +64,7 @@ struct TakePicturePage: View {
     func convertdata() -> String{
         let formatter = DateFormatter()
         formatter.timeZone = .current
-        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        formatter.dateFormat = "MM-dd-yyyy-HH:mm:ss"
         
         return formatter.string(from: self.date)
     }
