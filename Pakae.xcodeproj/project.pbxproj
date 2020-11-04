@@ -29,6 +29,7 @@
 		89673C0A2531745A00294010 /* UserSignInWithAppleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673C092531745A00294010 /* UserSignInWithAppleModel.swift */; };
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
 		8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */; };
+		8C07379F255264B600F87C49 /* MLDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07379E255264B600F87C49 /* MLDetection.swift */; };
 		8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A612541422B00FE8292 /* CameraInstructionView.swift */; };
 		8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */; };
 		8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1025385E40008A41E5 /* WelcomePage.swift */; };
@@ -107,6 +108,7 @@
 		89673C042531744600294010 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		89673C092531745A00294010 /* UserSignInWithAppleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInWithAppleModel.swift; sourceTree = "<group>"; };
 		8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationPage.swift; sourceTree = "<group>"; };
+		8C07379E255264B600F87C49 /* MLDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLDetection.swift; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
 		8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewCustomButton.swift; sourceTree = "<group>"; };
 		8C616C1025385E40008A41E5 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				2D345E33254D805500DB3246 /* STLViewItem.swift */,
 				2D345E38254D85FA00DB3246 /* BookmarkPage.swift */,
 				2D345E3D254D89F600DB3246 /* DirectToStore.swift */,
+				8C07379E255264B600F87C49 /* MLDetection.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */,
 				8C6F8E612536FD170084DA89 /* SignInWithAppleCoordinator.swift in Sources */,
 				8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */,
+				8C07379F255264B600F87C49 /* MLDetection.swift in Sources */,
 				8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */,
 				2D345E34254D805500DB3246 /* STLViewItem.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,

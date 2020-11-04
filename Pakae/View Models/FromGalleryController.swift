@@ -44,7 +44,7 @@ struct imagePicker : UIViewControllerRepresentable{
             let image = info[.originalImage] as! UIImage
 
             sendImage(userid: "2", password: "2", email: "2", gambar: image)
-            
+                        
             print("Success Send from gallery")
             
             parent.shown.toggle()
@@ -135,16 +135,17 @@ struct imagePicker : UIViewControllerRepresentable{
                     return
                 }
                 
-                let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
+                print(data)
                 
+                let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
+            
+
                 if let result = result {
                     DispatchQueue.main.async {
                         if(!result.id.isEmpty){
-                            
                             print("Success send")
-                            print(result.id)
                         }
-                        
+
                     }
                 }else{
                     DispatchQueue.main.async {
