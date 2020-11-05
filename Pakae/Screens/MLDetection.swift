@@ -8,17 +8,35 @@
 import SwiftUI
 import Combine
 
+extension String{
+    func load() -> UIImage{
+        do{
+            guard let url = URL(string: self)
+            else{
+                return UIImage()
+            }
+            
+            let data: Data = try Data (contentsOf: url)
+            
+            return UIImage(data: data) ?? UIImage()
+        }catch{
+            
+        }
+        return UIImage()
+    }
+}
+
 struct MLDetection: View {
-    @Binding var urlSendImage: String
+    var url: String = ""
 
     var body: some View {
         
         VStack{
             
-            ImageView(url: urlSendImage)
-            
-            Spacer()
-            
+            Image(uiImage: url.load())
+                .resizable()
+                .frame(width: 400, height: 550)
+                        
             VStack(alignment:.leading){
                 Text("TurnOver Collar Shirt")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -64,9 +82,15 @@ struct MLDetection: View {
             .background(Color.white)
             .cornerRadius(20.0)
             .shadow(color: Color.secondary.opacity(1.5), radius: 10, y: 8)
-            .position(x: 190,y: 650)
+            .position(x: 190,y: 100)
             .padding()
             
-        }
+        }.navigationBarHidden(true)
+    }
+}
+
+struct MLDetection_Previews: PreviewProvider {
+    static var previews: some View {
+        MLDetection()
     }
 }

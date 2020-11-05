@@ -10,11 +10,12 @@ import Combine
 import SwiftUI
 
 class ImageLoader:ObservableObject{
-    var downloadedImage:UIImage?
+    @Published var downloadedImage:UIImage?
     
     func fetchImage(url: String){
         guard let imageURL = URL(string: url) else{
-            fatalError("the url string is invalid")
+//            fatalError("the url string is invalid")
+            return
         }
         
         URLSession.shared.dataTask(with: imageURL){ data, response, error in

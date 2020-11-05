@@ -31,6 +31,9 @@
 		8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */; };
 		8C07379F255264B600F87C49 /* MLDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07379E255264B600F87C49 /* MLDetection.swift */; };
 		8C1C2BAD2553D592008CA338 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C2BAC2553D592008CA338 /* AppState.swift */; };
+		8C1C2BB22553DFFA008CA338 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C2BB12553DFFA008CA338 /* Temp.swift */; };
+		8C1C2BB72553FB45008CA338 /* CustomCameraController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C2BB62553FB45008CA338 /* CustomCameraController1.swift */; };
+		8C1C2BC025542357008CA338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C2BBF25542357008CA338 /* GoogleService-Info.plist */; };
 		8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A612541422B00FE8292 /* CameraInstructionView.swift */; };
 		8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */; };
 		8C30B9142553BA8B0048D379 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30B9132553BA8B0048D379 /* ImageView.swift */; };
@@ -46,7 +49,6 @@
 		8C6F8E7225370DE20084DA89 /* SigninWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */; };
 		8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F1592254170D900E1DED9 /* FromGalleryController.swift */; };
 		8C8A014C254AC0CB00C95F04 /* UserSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */; };
-		8C8D0D8025500D5600B9A467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C8D0D7F25500D5600B9A467 /* GoogleService-Info.plist */; };
 		8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */; };
 		8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */; };
 		8C92859A2542ED6300776BB8 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9285972542ED6300776BB8 /* OnboardingStepView.swift */; };
@@ -113,6 +115,9 @@
 		8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationPage.swift; sourceTree = "<group>"; };
 		8C07379E255264B600F87C49 /* MLDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLDetection.swift; sourceTree = "<group>"; };
 		8C1C2BAC2553D592008CA338 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8C1C2BB12553DFFA008CA338 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		8C1C2BB62553FB45008CA338 /* CustomCameraController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController1.swift; sourceTree = "<group>"; };
+		8C1C2BBF25542357008CA338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
 		8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewCustomButton.swift; sourceTree = "<group>"; };
 		8C30B9132553BA8B0048D379 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -129,7 +134,6 @@
 		8C6F8E7A25370F2A0084DA89 /* Pakae.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pakae.entitlements; sourceTree = "<group>"; };
 		8C7F1592254170D900E1DED9 /* FromGalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromGalleryController.swift; sourceTree = "<group>"; };
 		8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInModel.swift; sourceTree = "<group>"; };
-		8C8D0D7F25500D5600B9A467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		8C9285962542ED6300776BB8 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
 		8C9285972542ED6300776BB8 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
@@ -232,9 +236,9 @@
 				89673BD62531673A00294010 /* Screens */,
 				89673BD52531673400294010 /* Views */,
 				89673B9A253160CF00294010 /* PakaeApp.swift */,
+				8C1C2BBF25542357008CA338 /* GoogleService-Info.plist */,
 				89673B9C253160CF00294010 /* ContentView.swift */,
 				89673B9E253160D000294010 /* Assets.xcassets */,
-				8C8D0D7F25500D5600B9A467 /* GoogleService-Info.plist */,
 				89673BA3253160D000294010 /* Persistence.swift */,
 				89673BA8253160D000294010 /* Info.plist */,
 				89673BA5253160D000294010 /* Pakae.xcdatamodeld */,
@@ -276,6 +280,7 @@
 				8C8A014B254AC0CB00C95F04 /* UserSignInModel.swift */,
 				89673C092531745A00294010 /* UserSignInWithAppleModel.swift */,
 				8C9285952542ED6300776BB8 /* OnboardingDataModel.swift */,
+				8C1C2BB12553DFFA008CA338 /* Temp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			children = (
 				8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */,
 				8CCEB1D925404D4800052D88 /* CustomCameraController.swift */,
+				8C1C2BB62553FB45008CA338 /* CustomCameraController1.swift */,
 				8C7F1592254170D900E1DED9 /* FromGalleryController.swift */,
 				8C30B9202553BB8F0048D379 /* ImageLoader.swift */,
 			);
@@ -499,7 +505,7 @@
 			files = (
 				89673BA2253160D000294010 /* Preview Assets.xcassets in Resources */,
 				89673B9F253160D000294010 /* Assets.xcassets in Resources */,
-				8C8D0D8025500D5600B9A467 /* GoogleService-Info.plist in Resources */,
+				8C1C2BC025542357008CA338 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +635,7 @@
 			files = (
 				2D0FBDF82546C02800E4789C /* ContentReferencePage.swift in Sources */,
 				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
+				8C1C2BB22553DFFA008CA338 /* Temp.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
 				8C8A014C254AC0CB00C95F04 /* UserSignInModel.swift in Sources */,
 				8CCEB1DA25404D4900052D88 /* CustomCameraController.swift in Sources */,
@@ -667,6 +674,7 @@
 				2D345E34254D805500DB3246 /* STLViewItem.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
 				8C1C2BAD2553D592008CA338 /* AppState.swift in Sources */,
+				8C1C2BB72553FB45008CA338 /* CustomCameraController1.swift in Sources */,
 				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
 				8C9285A82542EE2B00776BB8 /* OnBoardingContentView.swift in Sources */,

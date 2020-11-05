@@ -10,6 +10,7 @@ import SwiftUI
 struct ImageView: View {
     
     @ObservedObject var imageLoader = ImageLoader()
+    @State var gambartest = UIImage()
     
     var placeholder:Image
     
@@ -19,10 +20,10 @@ struct ImageView: View {
     }
     
     var body: some View {
-        if let image = self.imageLoader.downloadedImage{
-            return Image(uiImage: image)
-        }
         
-        return placeholder
+        Image(uiImage: gambartest).resizable().aspectRatio(contentMode: .fit).frame(width: 100, height: 100).onReceive(imageLoader.$downloadedImage, perform: { data in
+            self.gambartest = data ?? UIImage()
+        })
+        
     }
 }

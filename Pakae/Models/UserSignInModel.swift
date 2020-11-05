@@ -56,3 +56,7 @@ extension MainTags: Decodable{
         
     }
 }
+
+class PhotoTemp: ObservableObject{
+    @Published var gambar: String = ""
+}

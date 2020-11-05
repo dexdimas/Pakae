@@ -25,6 +25,11 @@ struct CustomCameraView: View {
     @State private var didTap2:Bool = false
     
     @State private var isActive:Bool = false
+    @State private var isActive2:Bool = false
+    
+    @ObservedObject var gambar2 = PhotoTemp()
+    
+    @State private var url: String = ""
     
     var flag = 0
     
@@ -32,7 +37,7 @@ struct CustomCameraView: View {
         NavigationView{
             ZStack(alignment:.bottom){
                 
-                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
+                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url)
                 
                 VStack{
                     Spacer()
@@ -97,6 +102,8 @@ struct CustomCameraView: View {
                                 imagePicker(shown: $shown)
                             }
                         
+                        //                        NavigationLink("", destination: MLDetection(url: url), isActive: self.$shown)
+                        
                         Spacer()
                         
                         
@@ -109,8 +116,8 @@ struct CustomCameraView: View {
                             
                         }.offset(y: -25)
                         
-                        NavigationLink("", destination: MLDetection(urlSendImage:.constant(UserDefaults.standard.string(forKey: "url_image")!)), isActive: self.$isActive)
-
+                        NavigationLink("", destination: MLDetection(url: url), isActive: self.$isActive)
+                                                
                         Spacer()
                         
                         // BUTTON ROTATE
@@ -126,12 +133,12 @@ struct CustomCameraView: View {
                         
                         Spacer()
                         
-                    }
+                    }.edgesIgnoringSafeArea(.all)
                     
                     
                 }
-                
-            }
+            }.navigationBarHidden(true)
+            
         }
     }
 }
@@ -142,7 +149,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var image: UIImage?
     @Binding var didTapCapture: Bool
-    
+    @Binding var Image_url:String
     
     func makeUIViewController(context: Context) -> CustomCameraController {
         let controller = CustomCameraController()
@@ -154,11 +161,13 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
         
         if(self.didTapCapture) {
             cameraViewController.didTapRecord()
+            didTapCapture = false
         }
     }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
+
     }
     
     class Coordinator: NSObject, UINavigationControllerDelegate, AVCapturePhotoCaptureDelegate {
@@ -188,7 +197,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
             let tapCount = UserDefaults.standard.string(forKey: "access_token")
             
             let parameters = [
-                "user_id"  : userid,
+                "userid"  : userid,
                 "email"    : email,
                 "password" : password]  // build your dictionary however appropriate
             
@@ -266,27 +275,41 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
                 }
                 
                 let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
+//                let maintags = MainTags.init(color: "a", pattern: "a")
+//
+//
+//                let result: CameraSendModel? = CameraSendModel(id: "1", created_at: "a", updated_at: "a", title: "a", issuer: "a", issuer_category: "a", img_url: "https://image.shutterstock.com/image-illustration/microscopic-image-coronavirus-disease-2019-600w-1705355893.jpg", tags: ["a"], cloth_category: "a", cloth_type: "a", main_tags: maintags)
                 
-                if let result = result{
-                    DispatchQueue.main.async {
-                        if(!result.id.isEmpty){
-                            
-                            print("Success send")
-                            print(result.id)
-                            
-                            
-                            //                            self.urlSendImage = "\(result.img_url)"
-                            
-                            UserDefaults.standard.set(result.img_url, forKey: "url_image")
-                            
-                            
-                        }
-                        
-                    }
-                }else{
-                    DispatchQueue.main.async {
-                    }
-                }
+//                print(result?.id)
+//                print(result?.created_at)
+//                print(result?.updated_at)
+//                print(result?.title)
+//                print(result?.issuer)
+//                print(result?.issuer_category)
+//                print(result?.img_url)
+//                print(result?.cloth_category)
+//                print(result?.cloth_type)
+                
+                self.parent.Image_url = result!.img_url
+                
+//                if let result = result{
+//                    DispatchQueue.main.async {
+//                        if(!result.id.isEmpty){
+//
+//                            print("Success send")
+//                            print(result.id)
+//
+//                            self.parent.Image_url = result.img_url
+//
+//                            print(result.img_url)
+//
+//                        }
+//
+//                    }
+//                }else{
+//                    DispatchQueue.main.async {
+//                    }
+//                }
             }
             task.resume()
             
@@ -299,13 +322,13 @@ struct CustomCameraRepresentable1: UIViewControllerRepresentable {
     
     @Environment(\.presentationMode) var presentationMode
     
-    func makeUIViewController(context: Context) -> CustomCameraController {
-        let controller = CustomCameraController()
+    func makeUIViewController(context: Context) -> CustomCameraController1 {
+        let controller = CustomCameraController1()
         controller.delegate = context.coordinator
         return controller
     }
     
-    func updateUIViewController(_ cameraViewController: CustomCameraController, context: Context) {
+    func updateUIViewController(_ cameraViewController: CustomCameraController1, context: Context) {
         
     }
     

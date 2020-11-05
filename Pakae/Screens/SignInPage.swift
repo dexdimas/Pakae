@@ -13,10 +13,10 @@ struct SignInPage: View {
 
     var body: some View {
         VStack{
-            if AppState().didLaunchBefore == true && userAuth.isLoggedin == true{
+            if userAuth.isLoggedin == true{
                 AnyView(TakePicturePage())
-            }else{
-//                AnyView(Login())
+            }
+            else{
                 Login().environmentObject(userAuth)
             }
         }
