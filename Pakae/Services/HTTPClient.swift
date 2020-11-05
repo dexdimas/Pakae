@@ -48,7 +48,7 @@ class HTTPClient : ObservableObject{
                 DispatchQueue.main.async {
                     if(!result.access_token.isEmpty){
                         self.isLoggedin = true
-                        
+
                         UserDefaults.standard.set(result.access_token, forKey: "access_token")
                         UserDefaults.standard.set(result.refresh_token, forKey: "refresh_token")
                         

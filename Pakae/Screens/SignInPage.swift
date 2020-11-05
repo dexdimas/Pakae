@@ -10,14 +10,13 @@ import SwiftUI
 struct SignInPage: View {
         
     @StateObject private var userAuth = HTTPClient()
-    
+
     var body: some View {
         VStack{
-            if userAuth.isLoggedin{
+            if AppState().didLaunchBefore == true && userAuth.isLoggedin == true{
                 AnyView(TakePicturePage())
-//                Login().environmentObject(userAuth)
-
             }else{
+//                AnyView(Login())
                 Login().environmentObject(userAuth)
             }
         }

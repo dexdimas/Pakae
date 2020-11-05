@@ -30,8 +30,11 @@
 		89F16B958111B9C9A32A9E13 /* Pods_Pakae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */; };
 		8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */; };
 		8C07379F255264B600F87C49 /* MLDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07379E255264B600F87C49 /* MLDetection.swift */; };
+		8C1C2BAD2553D592008CA338 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C2BAC2553D592008CA338 /* AppState.swift */; };
 		8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A612541422B00FE8292 /* CameraInstructionView.swift */; };
 		8C219A6A254155C800FE8292 /* CameraViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */; };
+		8C30B9142553BA8B0048D379 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30B9132553BA8B0048D379 /* ImageView.swift */; };
+		8C30B9212553BB8F0048D379 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30B9202553BB8F0048D379 /* ImageLoader.swift */; };
 		8C616C1125385E40008A41E5 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C1025385E40008A41E5 /* WelcomePage.swift */; };
 		8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */; };
 		8C616C3825386289008A41E5 /* PasswordLabelandTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */; };
@@ -109,8 +112,11 @@
 		89673C092531745A00294010 /* UserSignInWithAppleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignInWithAppleModel.swift; sourceTree = "<group>"; };
 		8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationPage.swift; sourceTree = "<group>"; };
 		8C07379E255264B600F87C49 /* MLDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLDetection.swift; sourceTree = "<group>"; };
+		8C1C2BAC2553D592008CA338 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
 		8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewCustomButton.swift; sourceTree = "<group>"; };
+		8C30B9132553BA8B0048D379 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		8C30B9202553BB8F0048D379 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		8C616C1025385E40008A41E5 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		8C616C322538624D008A41E5 /* UsernameLabelandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabelandTextField.swift; sourceTree = "<group>"; };
 		8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLabelandTextField.swift; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				89673BA8253160D000294010 /* Info.plist */,
 				89673BA5253160D000294010 /* Pakae.xcdatamodeld */,
 				89673BA0253160D000294010 /* Preview Content */,
+				8C1C2BAC2553D592008CA338 /* AppState.swift */,
 			);
 			path = Pakae;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 				8C6F8E7125370DE20084DA89 /* SigninWithAppleViewModel.swift */,
 				8CCEB1D925404D4800052D88 /* CustomCameraController.swift */,
 				8C7F1592254170D900E1DED9 /* FromGalleryController.swift */,
+				8C30B9202553BB8F0048D379 /* ImageLoader.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
+				8C30B9132553BA8B0048D379 /* ImageView.swift */,
 				8C219A6E254156E100FE8292 /* TakePicture For Detect */,
 				ED75135C253869370073E28E /* Modifier */,
 			);
@@ -630,6 +639,7 @@
 				89673BA7253160D000294010 /* Pakae.xcdatamodeld in Sources */,
 				2D345E3E254D89F600DB3246 /* DirectToStore.swift in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
+				8C30B9142553BA8B0048D379 /* ImageView.swift in Sources */,
 				2D345E39254D85FA00DB3246 /* BookmarkPage.swift in Sources */,
 				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
 				8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */,
@@ -645,6 +655,7 @@
 				8C6F8E6D25370DA60084DA89 /* SignInWithAppleButton.swift in Sources */,
 				8C9285982542ED6300776BB8 /* OnboardingDataModel.swift in Sources */,
 				8CCEB1D025404D3900052D88 /* CustomCameraView.swift in Sources */,
+				8C30B9212553BB8F0048D379 /* ImageLoader.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
 				8C616C5025386696008A41E5 /* SigninButton.swift in Sources */,
 				2D0FBDF32546C01400E4789C /* ReferencePage.swift in Sources */,
@@ -655,6 +666,7 @@
 				8C219A622541422B00FE8292 /* CameraInstructionView.swift in Sources */,
 				2D345E34254D805500DB3246 /* STLViewItem.swift in Sources */,
 				89673B9B253160CF00294010 /* PakaeApp.swift in Sources */,
+				8C1C2BAD2553D592008CA338 /* AppState.swift in Sources */,
 				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
 				8C9285A82542EE2B00776BB8 /* OnBoardingContentView.swift in Sources */,

@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MLDetection: View {
-    
-//    let image = UIImage(data: )
-    
+    @Binding var urlSendImage: String
+
     var body: some View {
         
         VStack{
-                    
-//            Image(uiImage: image)
+            
+            ImageView(url: urlSendImage)
             
             Spacer()
             
@@ -68,15 +68,5 @@ struct MLDetection: View {
             .padding()
             
         }
-        
-        
-        
-        
-    }
-}
-
-struct MLDetection_Previews: PreviewProvider {
-    static var previews: some View {
-        MLDetection()
     }
 }

@@ -24,103 +24,114 @@ struct CustomCameraView: View {
     @State private var didTap1:Bool = false
     @State private var didTap2:Bool = false
     
+    @State private var isActive:Bool = false
+    
     var flag = 0
     
     var body: some View {
-        ZStack(alignment:.bottom){
-            
-            CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
-            
-            VStack{
-                Spacer()
+        NavigationView{
+            ZStack(alignment:.bottom){
                 
-                HStack{
-                    
-                    Spacer()
-                    
-                    // BUTTON TOP
-                    Button(action: {
-                        self.didTap = true
-                        self.didTap1 = false
-                        self.didTap2 = false
-                    }) {
-                        Text("Top")
-                    }
-                    .foregroundColor(didTap ? Color.red : Color.white)
-                    .offset(y: -25)
-                    
-                    
-                    // BUTTON SHORT
-                    Button(action: {
-                        self.didTap = false
-                        self.didTap1 = true
-                        self.didTap2 = false
-                    }) {
-                        Text("Short")
-                    }
-                    .foregroundColor(didTap1 ? Color.red : Color.white)
-                    .offset(y: -25)
-                    
-                    
-                    // BUTTON SHOES
-                    Button(action: {
-                        self.didTap = false
-                        self.didTap1 = false
-                        self.didTap2 = true
-                    }) {
-                        Text("Footwear")
-                    }
-                    .foregroundColor(didTap2 ? Color.red : Color.white)
-                    .offset(y: -25)
-                    
-                    Spacer()
-                    
-                }.offset(x: 15, y: -20)
+                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture)
                 
-                HStack{
-                    
+                VStack{
                     Spacer()
                     
-                    // BUTTON GALLERY
-                    Image(systemName: "photo").font(.largeTitle)
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .clipShape(Rectangle())
-                        .offset(y: -25)
-                        .onTapGesture {
-                            self.shown.toggle()
-                        }.sheet(isPresented: $shown){
-                            imagePicker(shown: $shown)
+                    HStack{
+                        
+                        Spacer()
+                        
+                        // BUTTON TOP
+                        Button(action: {
+                            self.didTap = true
+                            self.didTap1 = false
+                            self.didTap2 = false
+                        }) {
+                            Text("Top")
                         }
-                    
-                    Spacer()
-                    
-                    // BUTTON JEPRET
-                    CameraCaptureButtonView().onTapGesture {
-                        self.didTapCapture = true
-                    }.offset(y: -25)
-                    
-                    Spacer()
-                    
-                    // BUTTON ROTATE
-                    Image(systemName: "video").font(.largeTitle)
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .clipShape(Rectangle())
+                        .foregroundColor(didTap ? Color.red : Color.white)
                         .offset(y: -25)
-                        .onTapGesture {
-                            CustomCameraController().setupDevice()
+                        
+                        
+                        // BUTTON SHORT
+                        Button(action: {
+                            self.didTap = false
+                            self.didTap1 = true
+                            self.didTap2 = false
+                        }) {
+                            Text("Short")
                         }
+                        .foregroundColor(didTap1 ? Color.red : Color.white)
+                        .offset(y: -25)
+                        
+                        
+                        // BUTTON SHOES
+                        Button(action: {
+                            self.didTap = false
+                            self.didTap1 = false
+                            self.didTap2 = true
+                        }) {
+                            Text("Footwear")
+                        }
+                        .foregroundColor(didTap2 ? Color.red : Color.white)
+                        .offset(y: -25)
+                        
+                        Spacer()
+                        
+                    }.offset(x: 15, y: -20)
                     
-                    Spacer()
+                    HStack{
+                        
+                        Spacer()
+                        
+                        // BUTTON GALLERY
+                        Image(systemName: "photo").font(.largeTitle)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .clipShape(Rectangle())
+                            .offset(y: -25)
+                            .onTapGesture {
+                                self.shown.toggle()
+                            }.sheet(isPresented: $shown){
+                                imagePicker(shown: $shown)
+                            }
+                        
+                        Spacer()
+                        
+                        
+                        // BUTTON JEPRET
+                        CameraCaptureButtonView().onTapGesture {
+                            
+                            self.didTapCapture = true
+                            self.isActive = true
+                            
+                            
+                        }.offset(y: -25)
+                        
+                        NavigationLink("", destination: MLDetection(urlSendImage:.constant(UserDefaults.standard.string(forKey: "url_image")!)), isActive: self.$isActive)
+
+                        Spacer()
+                        
+                        // BUTTON ROTATE
+                        Image(systemName: "video").font(.largeTitle)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .clipShape(Rectangle())
+                            .offset(y: -25)
+                            .onTapGesture {
+                                CustomCameraController().setupDevice()
+                            }
+                        
+                        Spacer()
+                        
+                    }
+                    
                     
                 }
                 
-                
             }
-            
         }
     }
 }
@@ -153,11 +164,13 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     class Coordinator: NSObject, UINavigationControllerDelegate, AVCapturePhotoCaptureDelegate {
         let parent: CustomCameraRepresentable
         
+        @State var urlSendImage = ""
+        
         init(_ parent: CustomCameraRepresentable) {
             self.parent = parent
         }
         
-        func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?){
             
             parent.didTapCapture = false
             
@@ -167,21 +180,13 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
                 
                 sendImage(userid: "1", password: "1", email: "1", gambar: parent.image!)
                 
-                //                Storage.storage().reference(forURL: "gs://pakeniapps-project.appspot.com").child("\(TakePicturePage().convertdata()).jpeg").putData(parent.image!.jpegData(compressionQuality: 0.35)!, metadata: nil){
-                //                    (_, err) in
-                //                    if err != nil{
-                //                        return
-                //                    }
-                //                }
-                
-                
             }
         }
         
         func createRequest(userid: String, password: String, email: String, gambar: UIImage) throws -> URLRequest {
             
             let tapCount = UserDefaults.standard.string(forKey: "access_token")
-
+            
             let parameters = [
                 "user_id"  : userid,
                 "email"    : email,
@@ -268,6 +273,13 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
                             
                             print("Success send")
                             print(result.id)
+                            
+                            
+                            //                            self.urlSendImage = "\(result.img_url)"
+                            
+                            UserDefaults.standard.set(result.img_url, forKey: "url_image")
+                            
+                            
                         }
                         
                     }
@@ -277,6 +289,7 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
                 }
             }
             task.resume()
+            
         }
         
     }

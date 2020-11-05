@@ -134,21 +134,18 @@ struct imagePicker : UIViewControllerRepresentable{
                     print(error ?? "Unknown error")
                     return
                 }
-                
-                print(data)
-                
+                                
                 let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
             
-
                 if let result = result {
                     DispatchQueue.main.async {
                         if(!result.id.isEmpty){
                             print("Success send")
                         }
-
                     }
                 }else{
                     DispatchQueue.main.async {
+                        
                     }
                 }
             }
