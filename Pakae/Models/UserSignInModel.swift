@@ -14,7 +14,7 @@ struct UserSignInModel : Codable{
     let refresh_token: String
 }
 
-struct CameraSendModel{
+struct CameraSendModel: Codable{
     let id: String
     let created_at: String
     let updated_at: String
@@ -25,10 +25,8 @@ struct CameraSendModel{
     let tags: [String]
     let cloth_category: String
     let cloth_type: String
-    let main_tags: MainTags?
-}
-
-extension CameraSendModel: Decodable{
+    let main_tags: MainTags
+    
     enum CodingKeys: String, CodingKey{
         case id = "ID"
         case created_at = "CreatedAt"
@@ -40,23 +38,25 @@ extension CameraSendModel: Decodable{
         case tags = "Tags"
         case cloth_category = "ClothCategory"
         case cloth_type = "ClothType"
-        case main_tags
+        case main_tags = "MainTags"
     }
 }
 
-struct MainTags{
+struct MainTags: Codable{
     let color: String
     let pattern:String
-}
-
-extension MainTags: Decodable{
-    enum CodingKeys: String, CodingKey{
-        case color
-        case pattern
-        
-    }
 }
 
 class PhotoTemp: ObservableObject{
     @Published var gambar: String = ""
 }
+
+//struct Clothes{
+//    let clothes: [CameraSendModel]
+//}
+//
+//extension Clothes: Decodable{
+//    enum CodingKeys: String, CodingKey{
+//        case clothes = "Clothes"
+//    }
+//}

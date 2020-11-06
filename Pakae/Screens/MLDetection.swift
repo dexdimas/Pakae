@@ -28,6 +28,10 @@ extension String{
 
 struct MLDetection: View {
     var url: String = ""
+        
+    var styledata: CameraSendModel = CameraSendModel.init(id: "", created_at: "", updated_at: "", title: "", issuer: "", issuer_category: "", img_url: "", tags: [""], cloth_category: "", cloth_type: "", main_tags: MainTags.init(color: "", pattern: ""))
+    
+    @StateObject private var userAuth = HTTPClient()
 
     var body: some View {
         
@@ -56,7 +60,6 @@ struct MLDetection: View {
                 }
                 .padding(.leading)
                 
-                
                 HStack{
                     Text("Pattern      :")
                     Text("Basic")
@@ -65,7 +68,7 @@ struct MLDetection: View {
                 
                 
                 Button(action: {
-                    
+                    userAuth.send_databaju(data: styledata)
                 }, label: {
                     Text("Add to My Wardrobe")
                 })

@@ -31,13 +31,21 @@ struct CustomCameraView: View {
     
     @State private var url: String = ""
     
+    @State private var url_fromGallery: String = ""
+    
+    @State private var sendactive: Bool = false
+    
+    @State private var styledata: CameraSendModel = CameraSendModel.init(id: "", created_at: "", updated_at: "", title: "", issuer: "", issuer_category: "", img_url: "", tags: [""], cloth_category: "", cloth_type: "", main_tags: MainTags.init(color: "", pattern: ""))
+    
+    @State private var styledata_fromGallery: CameraSendModel = CameraSendModel.init(id: "", created_at: "", updated_at: "", title: "", issuer: "", issuer_category: "", img_url: "", tags: [""], cloth_category: "", cloth_type: "", main_tags: MainTags.init(color: "", pattern: ""))
+    
     var flag = 0
     
     var body: some View {
         NavigationView{
             ZStack(alignment:.bottom){
                 
-                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url)
+//                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url, StyleData: $styledata)
                 
                 VStack{
                     Spacer()
@@ -99,10 +107,10 @@ struct CustomCameraView: View {
                             .onTapGesture {
                                 self.shown.toggle()
                             }.sheet(isPresented: $shown){
-                                imagePicker(shown: $shown)
+                                imagePicker(shown: $shown, Image_url: $url_fromGallery, styledata: $styledata_fromGallery, SendActive: $sendactive)
                             }
                         
-                        //                        NavigationLink("", destination: MLDetection(url: url), isActive: self.$shown)
+                        NavigationLink("", destination: MLDetection(url: url_fromGallery, styledata: styledata_fromGallery), isActive: self.$sendactive)
                         
                         Spacer()
                         
@@ -116,8 +124,8 @@ struct CustomCameraView: View {
                             
                         }.offset(y: -25)
                         
-                        NavigationLink("", destination: MLDetection(url: url), isActive: self.$isActive)
-                                                
+                        NavigationLink("", destination: MLDetection(url:url, styledata: styledata), isActive: self.$isActive)
+                        
                         Spacer()
                         
                         // BUTTON ROTATE
@@ -151,6 +159,8 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     @Binding var didTapCapture: Bool
     @Binding var Image_url:String
     
+    @Binding var StyleData: CameraSendModel
+    
     func makeUIViewController(context: Context) -> CustomCameraController {
         let controller = CustomCameraController()
         controller.delegate = context.coordinator
@@ -167,13 +177,11 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
-
+        
     }
     
     class Coordinator: NSObject, UINavigationControllerDelegate, AVCapturePhotoCaptureDelegate {
         let parent: CustomCameraRepresentable
-        
-        @State var urlSendImage = ""
         
         init(_ parent: CustomCameraRepresentable) {
             self.parent = parent
@@ -275,41 +283,43 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
                 }
                 
                 let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
-//                let maintags = MainTags.init(color: "a", pattern: "a")
-//
-//
-//                let result: CameraSendModel? = CameraSendModel(id: "1", created_at: "a", updated_at: "a", title: "a", issuer: "a", issuer_category: "a", img_url: "https://image.shutterstock.com/image-illustration/microscopic-image-coronavirus-disease-2019-600w-1705355893.jpg", tags: ["a"], cloth_category: "a", cloth_type: "a", main_tags: maintags)
+                //                let maintags = MainTags.init(color: "a", pattern: "a")
+                //
+                //
+                //                let result: CameraSendModel? = CameraSendModel(id: "1", created_at: "a", updated_at: "a", title: "a", issuer: "a", issuer_category: "a", img_url: "https://image.shutterstock.com/image-illustration/microscopic-image-coronavirus-disease-2019-600w-1705355893.jpg", tags: ["a"], cloth_category: "a", cloth_type: "a", main_tags: maintags)
                 
-//                print(result?.id)
-//                print(result?.created_at)
-//                print(result?.updated_at)
-//                print(result?.title)
-//                print(result?.issuer)
-//                print(result?.issuer_category)
-//                print(result?.img_url)
-//                print(result?.cloth_category)
-//                print(result?.cloth_type)
+                //                print(result?.id)
+                //                print(result?.created_at)
+                //                print(result?.updated_at)
+                //                print(result?.title)
+                //                print(result?.issuer)
+                //                print(result?.issuer_category)
+                //                print(result?.img_url)
+                //                print(result?.cloth_category)
+                //                print(result?.cloth_type)
                 
                 self.parent.Image_url = result!.img_url
                 
-//                if let result = result{
-//                    DispatchQueue.main.async {
-//                        if(!result.id.isEmpty){
-//
-//                            print("Success send")
-//                            print(result.id)
-//
-//                            self.parent.Image_url = result.img_url
-//
-//                            print(result.img_url)
-//
-//                        }
-//
-//                    }
-//                }else{
-//                    DispatchQueue.main.async {
-//                    }
-//                }
+                self.parent.StyleData = result!
+                
+                //                if let result = result{
+                //                    DispatchQueue.main.async {
+                //                        if(!result.id.isEmpty){
+                //
+                //                            print("Success send")
+                //                            print(result.id)
+                //
+                //                            self.parent.Image_url = result.img_url
+                //
+                //                            print(result.img_url)
+                //
+                //                        }
+                //
+                //                    }
+                //                }else{
+                //                    DispatchQueue.main.async {
+                //                    }
+                //                }
             }
             task.resume()
             

@@ -16,6 +16,10 @@ struct imagePicker : UIViewControllerRepresentable{
     }
     
     @Binding var shown : Bool
+    @Binding var Image_url: String
+    @Binding var styledata: CameraSendModel
+    
+    @Binding var SendActive:Bool
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<imagePicker>) -> UIImagePickerController {
         let imagepic = UIImagePickerController()
@@ -42,12 +46,14 @@ struct imagePicker : UIViewControllerRepresentable{
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let image = info[.originalImage] as! UIImage
-
+            
             sendImage(userid: "2", password: "2", email: "2", gambar: image)
-                        
+            
             print("Success Send from gallery")
             
             parent.shown.toggle()
+            
+            parent.SendActive = true
             
         }
         
@@ -134,20 +140,37 @@ struct imagePicker : UIViewControllerRepresentable{
                     print(error ?? "Unknown error")
                     return
                 }
-                                
+                
                 let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
-            
-                if let result = result {
-                    DispatchQueue.main.async {
-                        if(!result.id.isEmpty){
-                            print("Success send")
-                        }
-                    }
-                }else{
-                    DispatchQueue.main.async {
-                        
-                    }
+                
+                print(result?.id)
+                print(result?.created_at)
+                print(result?.updated_at)
+                print(result?.title)
+                print(result?.issuer)
+                print(result?.issuer_category)
+                print(result?.img_url)
+                print(result?.cloth_category)
+                print(result?.cloth_type)
+                
+                DispatchQueue.main.async {
+                    self.parent.Image_url = result!.img_url
+                    
+                    self.parent.styledata = result!
                 }
+             
+                //
+                //                if let result = result {
+                //                    DispatchQueue.main.async {
+                //                        if(!result.id.isEmpty){
+                //                            print("Success send")
+                //                        }
+                //                    }
+                //                }else{
+                //                    DispatchQueue.main.async {
+                //
+                //                    }
+                //                }
             }
             task.resume()
         }

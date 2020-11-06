@@ -28,7 +28,7 @@ struct TakePicturePage: View {
                 ZStack {
                     
                     //VIEW 2
-                    CustomCameraRepresentable1()
+//                    CustomCameraRepresentable1()
                     Spacer()
                     CameraViewCustomButton()
                     
