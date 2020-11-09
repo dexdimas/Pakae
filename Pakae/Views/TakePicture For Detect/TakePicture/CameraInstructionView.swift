@@ -12,13 +12,15 @@ struct CameraInstructionView: View {
     var body: some View {
         VStack{
             
-            Image("ImageTest").resizable()
+            Image("Tshirt").resizable()
                 
                 .frame(width: 250, height: 250, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
-            Text("Pastikan pakaian anda ada di tengah \n bingkai ini dalam kondisi tidak terlipat")
+            Text("Make sure item is in the frame and not folded")
                 
                 .multilineTextAlignment(.center)
+                
+                .foregroundColor(.white)
                 
                 .font(Font.system(size: 18))
                 
@@ -26,11 +28,15 @@ struct CameraInstructionView: View {
                 
                 .padding(10)
             
-            Text("Tap for dismiss")
+            Text("Tap anywhere to start")
                 
                 .multilineTextAlignment(.center)
                 
+                .foregroundColor(.white)
+                
                 .font(Font.system(size: 10))
+            
+                .padding(.top,25)
         }
         .padding(28)
 

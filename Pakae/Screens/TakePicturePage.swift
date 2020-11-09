@@ -74,3 +74,9 @@ struct TakePicturePage: View {
     }
     
 }
+
+struct TakePicturePage_Previews: PreviewProvider {
+    static var previews: some View {
+        TakePicturePage()
+    }
+}

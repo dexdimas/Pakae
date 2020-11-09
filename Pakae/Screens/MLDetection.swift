@@ -28,11 +28,13 @@ extension String{
 
 struct MLDetection: View {
     var url: String = ""
-        
+    
+    @State private var name = ""
+    
     var styledata: CameraSendModel = CameraSendModel.init(id: "", created_at: "", updated_at: "", title: "", issuer: "", issuer_category: "", img_url: "", tags: [""], cloth_category: "", cloth_type: "", main_tags: MainTags.init(color: "", pattern: ""))
     
     @StateObject private var userAuth = HTTPClient()
-
+    
     var body: some View {
         
         VStack{
@@ -40,35 +42,37 @@ struct MLDetection: View {
             Image(uiImage: url.load())
                 .resizable()
                 .frame(width: 400, height: 550)
-                        
+            
             VStack(alignment:.leading){
-                Text("TurnOver Collar Shirt")
+                
+                TextField("Write Item Title", text: $name)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .bold()
                     .padding(.leading)
                 
+                Divider()
+                    .background(Color.black)
+                    .padding(.horizontal, 20)
                 
-                Text("Slim Fit")
+                Text("\(styledata.cloth_type)")
                     .font(.title)
                     .foregroundColor(.gray)
                     .padding(.bottom)
                     .padding(.leading)
                 
                 HStack{
-                    Text("Color         :")
-                    Text("Blue")
+                    Text("Color         : \(styledata.main_tags.color)")
                 }
                 .padding(.leading)
                 
                 HStack{
-                    Text("Pattern      :")
-                    Text("Basic")
+                    Text("Pattern      : \(styledata.main_tags.pattern)")
                 }.padding(.bottom)
                 .padding(.leading)
                 
-                
                 Button(action: {
-                    userAuth.send_databaju(data: styledata)
+                    let data = CameraSendModel(id: styledata.id, created_at: styledata.created_at, updated_at: styledata.updated_at, title: name, issuer: styledata.issuer, issuer_category: styledata.issuer_category, img_url: styledata.img_url, tags: styledata.tags, cloth_category: styledata.cloth_category, cloth_type: styledata.cloth_type, main_tags: styledata.main_tags)
+                   
+                    userAuth.send_databaju(data: data)
                 }, label: {
                     Text("Add to My Wardrobe")
                 })
