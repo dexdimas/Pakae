@@ -15,42 +15,47 @@ struct WelcomePage: View {
             
             Spacer()
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Image("coba-5").resizable()
+                .frame(width: 400, height: 350)
+            
+            SignInWithAppleButton()
+                .shadow(color: Color.secondary.opacity(0.5), radius: 10, y: 8)
+                .padding()
+            
+            Button(action: {
+                
+            }, label: {
                 Text("Sign In")
             })
             .frame(width: 350, height: 40)
-            
             .foregroundColor(.white)
-            
-            .background(Color.red)
-            
+            .background(Color.gray)
             .cornerRadius(10.0)
-            
             .shadow(color: Color.secondary.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 8)
-            
             .padding()
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                
+            }, label: {
                 Text("Sign Up")
             })
             .frame(width: 350, height: 40)
-            
-            .foregroundColor(.red)
-            
-            .border(Color.red, width: 1)
-            
+            .foregroundColor(.black)
+            .background(Color.white)
             .cornerRadius(10.0)
-            
-            .shadow(color: Color.secondary.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 8)
-
+            .shadow(color: Color.secondary.opacity(0.5), radius: 10, y: 8)
             .padding()
             
-            SignInWithAppleButton()
+            Spacer()
+            
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 
+                Text("Skip")
+                    .foregroundColor(.gray)
+                    .font(.title3)
+                
+            })
             .padding()
-            
-            SkipButton()
-                .padding()
             
         }
         

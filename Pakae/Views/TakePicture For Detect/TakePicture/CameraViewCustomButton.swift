@@ -22,7 +22,7 @@ struct CameraViewCustomButton: View {
                 }) {
                     Text("Top")
                         .foregroundColor(.white)
-                }.offset(y: -25)
+                }.offset(y: -45)
                 
                 // BUTTON SHORT
                 Button(action: {
@@ -30,7 +30,7 @@ struct CameraViewCustomButton: View {
                 }) {
                     Text("Short")
                         .foregroundColor(.white)
-                }.offset(y: -25)
+                }.offset(y: -45)
                 
                 
                 // BUTTON SHOES
@@ -39,11 +39,11 @@ struct CameraViewCustomButton: View {
                 }) {
                     Text("Footwear")
                         .foregroundColor(.white)
-                }.offset(y: -25)
+                }.offset(y: -45)
                 
                 Spacer()
                 
-            }.offset(x: 15, y: -20)
+            }.offset(x: 15, y: -40)
             
             HStack{
                 
@@ -55,13 +55,17 @@ struct CameraViewCustomButton: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .clipShape(Rectangle())
-                    .offset(y: -25)
+                    .offset(x:-3 ,y: -60)
                 
                 Spacer()
                 
                 // BUTTON JEPRET
-                CameraCaptureButtonView()
-                    .offset(y: -25)
+                Image(systemName: "camera").font(.largeTitle)
+                    .padding(30)
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
+                    .offset(x:2, y: -60)
                 
                 Spacer()
                 
@@ -71,7 +75,7 @@ struct CameraViewCustomButton: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .clipShape(Rectangle())
-                    .offset(y: -25)
+                    .offset(x:2, y: -60)
                 
                 Spacer()
                 

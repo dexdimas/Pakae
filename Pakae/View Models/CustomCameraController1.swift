@@ -2,7 +2,7 @@
 import SwiftUI
 import AVFoundation
 
-class CustomCameraController: UIViewController {
+class CustomCameraController1: UIViewController {
     
     var image: UIImage?
     
@@ -21,7 +21,7 @@ class CustomCameraController: UIViewController {
     func didTapRecord() {
         
         let settings = AVCapturePhotoSettings()
-        photoOutput?.capturePhoto(with: settings, delegate: delegate!)
+//        photoOutput?.capturePhoto(with: settings, delegate: delegate!)
         
     }
     
@@ -84,7 +84,7 @@ class CustomCameraController: UIViewController {
         self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-        self.cameraPreviewLayer?.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height-400)
+        self.cameraPreviewLayer?.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: self.view.frame.height-400)
 //            self.view.frame
 //        self.cameraPreviewLayer?.frame
         self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
