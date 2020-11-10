@@ -39,13 +39,13 @@ struct CustomCameraView: View {
     
     @State private var styledata_fromGallery: CameraSendModel = CameraSendModel.init(id: "", created_at: "", updated_at: "", title: "", issuer: "", issuer_category: "", img_url: "", tags: [""], cloth_category: "", cloth_type: "", main_tags: MainTags.init(color: "", pattern: ""))
     
-    var flag = 0
+    @State var flag = 0
     
     var body: some View {
         NavigationView{
             ZStack(alignment:.bottom){
                 
-//                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url, StyleData: $styledata)
+//                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url, flag1: flag, StyleData: $styledata)
                 
                 VStack{
                     Spacer()
@@ -98,8 +98,9 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         // BUTTON GALLERY
-                        Image(systemName: "photo").font(.largeTitle)
-                            .padding()
+                        Image(systemName: "photo")
+//                            .resizable()
+                            .font(.largeTitle)
                             .background(Color.red)
                             .foregroundColor(.white)
                             .clipShape(Rectangle())
@@ -115,13 +116,14 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         
-                        // BUTTON JEPRET
+//                         BUTTON JEPRET
                         CameraCaptureButtonView().onTapGesture {
-                            
+
                             self.didTapCapture = true
                             self.isActive = true
-                            
-                            
+                            print("kepencet")
+
+
                         }.offset(y: -25)
                         
                         NavigationLink("", destination: MLDetection(url:url, styledata: styledata), isActive: self.$isActive)
@@ -129,23 +131,22 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         // BUTTON ROTATE
-                        Image(systemName: "video").font(.largeTitle)
-                            .padding()
-                            .background(Color.red)
-                            .foregroundColor(.white)
+                        Image("RotateCamera")
+                            .resizable()
+                            .font(.largeTitle)
+                            .frame(width: 20, height: 20)
                             .clipShape(Rectangle())
                             .offset(y: -25)
                             .onTapGesture {
-                                CustomCameraController().setupDevice()
+                               flag = 1
+//                                CustomCameraController().setupDevice()
                             }
                         
                         Spacer()
                         
                     }.edgesIgnoringSafeArea(.all)
-                    
-                    
                 }
-            }.navigationBarHidden(true)
+            }.navigationBarHidden(true).background(Color.black)
             
         }
     }
@@ -159,10 +160,13 @@ struct CustomCameraRepresentable: UIViewControllerRepresentable {
     @Binding var didTapCapture: Bool
     @Binding var Image_url:String
     
+    @State var flag1 = 0
+    
     @Binding var StyleData: CameraSendModel
     
     func makeUIViewController(context: Context) -> CustomCameraController {
         let controller = CustomCameraController()
+        controller.flag = flag1
         controller.delegate = context.coordinator
         return controller
     }
@@ -360,13 +364,6 @@ struct CustomCameraRepresentable1: UIViewControllerRepresentable {
 }
 
 extension Data {
-    
-    /// Append string to Data
-    ///
-    /// Rather than littering my code with calls to `data(using: .utf8)` to convert `String` values to `Data`, this wraps it in a nice convenient little extension to Data. This defaults to converting using UTF-8.
-    ///
-    /// - parameter string:       The string to be added to the `Data`.
-    
     mutating func append(_ string: String, using encoding: String.Encoding = .utf8) {
         if let data = string.data(using: encoding) {
             append(data)

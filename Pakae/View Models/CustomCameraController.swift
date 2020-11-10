@@ -13,11 +13,11 @@ class CustomCameraController: UIViewController {
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
-    var flag = 0
+    @State var flag = 0
     
     //DELEGATE
     var delegate: AVCapturePhotoCaptureDelegate?
-    
+        
     func didTapRecord() {
         
         let settings = AVCapturePhotoSettings()

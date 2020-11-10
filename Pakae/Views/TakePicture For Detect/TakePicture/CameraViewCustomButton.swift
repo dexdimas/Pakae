@@ -51,37 +51,37 @@ struct CameraViewCustomButton: View {
                 
                 // BUTTON GALLERY
                 Image(systemName: "photo").font(.largeTitle)
-                    .padding()
                     .background(Color.red)
                     .foregroundColor(.white)
                     .clipShape(Rectangle())
-                    .offset(x:-3 ,y: -60)
+                    .offset(x:-4 ,y: -60)
                 
                 Spacer()
                 
                 // BUTTON JEPRET
-                Image(systemName: "camera").font(.largeTitle)
+                Image("Shutter")
+                    .resizable()
+                    .font(.largeTitle)
                     .padding(30)
-                    .background(Color.red)
-                    .foregroundColor(.white)
+                    .frame(width: 80, height: 80)
                     .clipShape(Circle())
-                    .offset(x:2, y: -60)
+                    .offset(x:3, y: -60)
                 
                 Spacer()
                 
                 // BUTTON ROTATE
-                Image(systemName: "video").font(.largeTitle)
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
+                Image("RotateCamera")
+                    .resizable()
+                    .font(.largeTitle)
+                    .frame(width: 20, height: 20)
                     .clipShape(Rectangle())
-                    .offset(x:2, y: -60)
+                    .offset(x:4, y: -60)
                 
                 Spacer()
                 
             }
             
             
-        }
+        }.background(Color.black)
     }
 }
