@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D0FBDF32546C01400E4789C /* ReferencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FBDF22546C01400E4789C /* ReferencePage.swift */; };
-		2D0FBDF82546C02800E4789C /* ContentReferencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */; };
 		2D345E34254D805500DB3246 /* STLViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D345E33254D805500DB3246 /* STLViewItem.swift */; };
 		2D345E39254D85FA00DB3246 /* BookmarkPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D345E38254D85FA00DB3246 /* BookmarkPage.swift */; };
 		2D345E3E254D89F600DB3246 /* DirectToStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D345E3D254D89F600DB3246 /* DirectToStore.swift */; };
+		2D345E4E255256EB00DB3246 /* ReferencePageNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D345E4D255256EB00DB3246 /* ReferencePageNew.swift */; };
+		2D4F7F31255A4B6800D08E1E /* OpenSafari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F7F30255A4B6800D08E1E /* OpenSafari.swift */; };
 		2DD2DAEA2546CE0900F105B9 /* ShopTheLookPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */; };
+		2DFF689A255520BD001087F6 /* ViewOnWebsiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF6899255520BD001087F6 /* ViewOnWebsiteButton.swift */; };
 		59B5F43704CD8FCCF8DFF37C /* Pods_Pakae_PakaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */; };
 		8936D4392541AF0200070900 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936D4382541AF0200070900 /* TabBarPage.swift */; };
 		89673B9B253160CF00294010 /* PakaeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89673B9A253160CF00294010 /* PakaeApp.swift */; };
@@ -84,12 +85,13 @@
 		02D6FFF6DBFE1D6D704B8134 /* Pods-PakaeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PakaeTests.release.xcconfig"; path = "Target Support Files/Pods-PakaeTests/Pods-PakaeTests.release.xcconfig"; sourceTree = "<group>"; };
 		1C6DCBCE3BFB7D2DF783B3C7 /* Pods-Pakae-PakaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae-PakaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		263ED28431221E5B3E021171 /* Pods-Pakae-PakaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pakae-PakaeUITests.release.xcconfig"; path = "Target Support Files/Pods-Pakae-PakaeUITests/Pods-Pakae-PakaeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2D0FBDF22546C01400E4789C /* ReferencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencePage.swift; sourceTree = "<group>"; };
-		2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentReferencePage.swift; sourceTree = "<group>"; };
 		2D345E33254D805500DB3246 /* STLViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STLViewItem.swift; sourceTree = "<group>"; };
 		2D345E38254D85FA00DB3246 /* BookmarkPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPage.swift; sourceTree = "<group>"; };
 		2D345E3D254D89F600DB3246 /* DirectToStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectToStore.swift; sourceTree = "<group>"; };
+		2D345E4D255256EB00DB3246 /* ReferencePageNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencePageNew.swift; sourceTree = "<group>"; };
+		2D4F7F30255A4B6800D08E1E /* OpenSafari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSafari.swift; sourceTree = "<group>"; };
 		2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTheLookPage.swift; sourceTree = "<group>"; };
+		2DFF6899255520BD001087F6 /* ViewOnWebsiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOnWebsiteButton.swift; sourceTree = "<group>"; };
 		33656F757A8FDA920FD568A9 /* Pods_Pakae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		416696E19666AF5060001433 /* Pods_PakaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PakaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5866AEF46CDCF97C32C40C64 /* Pods_Pakae_PakaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pakae_PakaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +119,7 @@
 		8C1C2BAC2553D592008CA338 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		8C1C2BB12553DFFA008CA338 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		8C1C2BB62553FB45008CA338 /* CustomCameraController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraController1.swift; sourceTree = "<group>"; };
-		8C1C2BBF25542357008CA338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C1C2BBF25542357008CA338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C219A612541422B00FE8292 /* CameraInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInstructionView.swift; sourceTree = "<group>"; };
 		8C219A69254155C800FE8292 /* CameraViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewCustomButton.swift; sourceTree = "<group>"; };
 		8C30B9132553BA8B0048D379 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,8 @@
 				8C616C3725386289008A41E5 /* PasswordLabelandTextField.swift */,
 				8C6DBEB22542C75D0023BB86 /* PasswordLessThanLabel.swift */,
 				8C616C4F25386696008A41E5 /* SigninButton.swift */,
+				2DFF6899255520BD001087F6 /* ViewOnWebsiteButton.swift */,
+				2D4F7F30255A4B6800D08E1E /* OpenSafari.swift */,
 				8C30B9132553BA8B0048D379 /* ImageView.swift */,
 				8C219A6E254156E100FE8292 /* TakePicture For Detect */,
 				ED75135C253869370073E28E /* Modifier */,
@@ -325,8 +329,7 @@
 				8936D4382541AF0200070900 /* TabBarPage.swift */,
 				8C9285A72542EE2B00776BB8 /* OnBoardingContentView.swift */,
 				8C04D7D02546CEDC00FC33FB /* BasicInformationPage.swift */,
-				2D0FBDF22546C01400E4789C /* ReferencePage.swift */,
-				2D0FBDF72546C02800E4789C /* ContentReferencePage.swift */,
+				2D345E4D255256EB00DB3246 /* ReferencePageNew.swift */,
 				2DD2DAE92546CE0900F105B9 /* ShopTheLookPage.swift */,
 				2D345E33254D805500DB3246 /* STLViewItem.swift */,
 				2D345E38254D85FA00DB3246 /* BookmarkPage.swift */,
@@ -633,7 +636,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D0FBDF82546C02800E4789C /* ContentReferencePage.swift in Sources */,
 				8C9285992542ED6300776BB8 /* OnboardingViewPure.swift in Sources */,
 				8C1C2BB22553DFFA008CA338 /* Temp.swift in Sources */,
 				8CCEB1CB25404D3400052D88 /* CameraCaptureButtonView.swift in Sources */,
@@ -647,6 +649,7 @@
 				2D345E3E254D89F600DB3246 /* DirectToStore.swift in Sources */,
 				89673C002531742400294010 /* HTTPClient.swift in Sources */,
 				8C30B9142553BA8B0048D379 /* ImageView.swift in Sources */,
+				2D4F7F31255A4B6800D08E1E /* OpenSafari.swift in Sources */,
 				2D345E39254D85FA00DB3246 /* BookmarkPage.swift in Sources */,
 				ED75135E253869480073E28E /* PrimaryButtonScreen.swift in Sources */,
 				8C7F1593254170D900E1DED9 /* FromGalleryController.swift in Sources */,
@@ -665,7 +668,7 @@
 				8C30B9212553BB8F0048D379 /* ImageLoader.swift in Sources */,
 				89673B9D253160CF00294010 /* ContentView.swift in Sources */,
 				8C616C5025386696008A41E5 /* SigninButton.swift in Sources */,
-				2D0FBDF32546C01400E4789C /* ReferencePage.swift in Sources */,
+				2DFF689A255520BD001087F6 /* ViewOnWebsiteButton.swift in Sources */,
 				8C04D7D12546CEDC00FC33FB /* BasicInformationPage.swift in Sources */,
 				8C6F8E612536FD170084DA89 /* SignInWithAppleCoordinator.swift in Sources */,
 				8C616C332538624D008A41E5 /* UsernameLabelandTextField.swift in Sources */,
@@ -676,6 +679,7 @@
 				8C1C2BAD2553D592008CA338 /* AppState.swift in Sources */,
 				8C1C2BB72553FB45008CA338 /* CustomCameraController1.swift in Sources */,
 				8936D4392541AF0200070900 /* TabBarPage.swift in Sources */,
+				2D345E4E255256EB00DB3246 /* ReferencePageNew.swift in Sources */,
 				8CEF6AED253730B20039002B /* SignInPage.swift in Sources */,
 				8C9285A82542EE2B00776BB8 /* OnBoardingContentView.swift in Sources */,
 				8C6DBEAB2542C7490023BB86 /* MustContainsEmailLabel.swift in Sources */,

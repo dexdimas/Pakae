@@ -1,71 +1,31 @@
 //
-//  BookmarkPage.swift
+//  ReferencePageNew.swift
 //  Pakae
 //
-//  Created by Evan Renanto on 31/10/20.
+//  Created by Evan Renanto on 04/11/20.
 //
 
 import SwiftUI
 
-struct BookmarkPage: View {
-    
-    @State private var fnb = 0
-    var choose = ["Outfit", "Items"]
+struct ReferencePageNew: View {
     
     var body: some View {
-        VStack{
+        
+        NavigationView{
             
-            HStack{
-                
-                HStack{
-                    
-                    Text("My Favorite").font(.title)
-                }
-                
-                Spacer()
-                
-                HStack{
-                    Image("coba-1")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .cornerRadius(70)
-                }
-            }.frame(width: 380)
-            
-            Spacer()
-            
-            Picker(selection: $fnb, label: Text("What is your favorite color?")) {
-                ForEach(0..<choose.count) { index in
-                    Text(self.choose[index]).tag(index)
-                }
-            }.pickerStyle(SegmentedPickerStyle())
-            .frame(width: 350)
-            .padding(50)
-            .foregroundColor(.blue)
-            .offset(y: -30)
-            
-            Spacer()
-            
-//            if(choose.tag == 0){
-//
-//            }else if(choose.tag == 1){
-//
-//            }
-            
-            Home1()
-                .offset(y: -60)
-            
+            Home()
+                .navigationBarTitle("References")
         }
     }
 }
 
-struct BookmarkPage_Previews: PreviewProvider {
+struct ReferencePageNew_Previews: PreviewProvider {
     static var previews: some View {
-        BookmarkPage()
+        ReferencePageNew()
     }
 }
 
-struct Home1 : View {
+struct Home : View {
     
     @State var data = [
         
@@ -98,10 +58,9 @@ struct Home1 : View {
     }
 }
 
-
-struct Card1 : View {
+struct Card : View {
     
-    var data : Type1
+    var data : Type
     
     var body: some View {
         VStack{
@@ -134,11 +93,11 @@ struct Card1 : View {
     }
 }
 
-struct MainView1 : View {
+struct MainView : View {
     
-    //    @ObservedObject var listData = getData()
+//    @ObservedObject var listData = getData()
     
-    @Binding var data : [Type1]
+    @Binding var data : [Type]
     @Binding var Grid : [Int]
     
     var body: some View {
@@ -161,7 +120,7 @@ struct MainView1 : View {
                                         
                                         if j != self.data.count{
                                             
-                                            Card1(data: self.data[j])
+                                            Card(data: self.data[j])
                                         }
                                     }
                                 }
@@ -180,7 +139,92 @@ struct MainView1 : View {
     }
 }
 
-struct Type1 : Decodable {
+//class getData : ObservableObject {
+//
+//    @Published var data = [Type]()
+//    @Published var count = 1
+//
+// ambil data selection clothes dr andimas
+// @Publised var styles = [Style]()
+//
+//    init() {
+//
+//        updateData()
+//    }
+//
+//    func updateData(){
+//        let url = "http://18.140.3.202:8080/api/v1/user/find-reference"
+//
+//        let session = URLSession(configuration: .default)
+//
+//        body ambil data
+//        let body : [String : cloth] = ["clothes" : clothes]
+//
+//        data diganti body,
+//        session.dataTask(with: URL(string: url)!) { (data, , err) in
+//            if err ! nil{
+//                print((err?.localizedDescription)!)
+//                return
+//            }
+//
+//            do{
+//                let res = JSONDecoder().decode(type: Decodeable.self, from: data!)
+//
+//                let oldstyles = self.styles
+//
+//                self.styles = oldstyles + res.response.types
+//            }
+//            catch{
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+//
+//    func updateData(){
+//        let url = "http://18.140.3.202:8080/api/v1/user/find-reference"
+//
+//        let request : URLRequest = URLRequest(url: url)
+//
+//        let session = URLSession(configuration: .default)
+//
+//        let body : [String : cloth] = ["clothes" : clothes]
+//
+//        request.httpMethod = "POST"
+//        request.setValue(forHTTPHeaderField: "Content-Type")
+//        request.setValue("Bearer \(accessToken)",forHTTPHeaderField: "Authorization")
+//        request.httpBody = body //takut error
+//
+//        session.dataTask(with: request) { (body, response, err) in
+//            if err ! nil{
+//                print((err?.localizedDescription)!)
+//                return
+//            } udh dibikin
+//
+//            do{
+//                let res = JSONDecoder().decode(type: Decodeable.self, from: data!)
+//
+//                let oldstyles = self.styles
+//
+//                self.styles = oldstyles + res.response.types
+//            }
+//            catch{
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+//}
+
+struct Detail : Decodable {
+    
+    var response : Response
+}
+
+struct Response : Decodable {
+    
+    var types : [Type]
+}
+
+struct Type : Decodable {
     
     var name : String
     var pic : String

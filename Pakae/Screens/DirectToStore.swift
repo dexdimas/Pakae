@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DirectToStore: View {
+    
     var body: some View {
+        
         ZStack{
             
             Image("coba-7").resizable()
