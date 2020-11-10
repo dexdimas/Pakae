@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ViewOnWebsiteButton: View {
+    
+    @State var show = false
+    
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: {
+            
+            self.show.toggle()
+            
+        }, label: {
             
             Text("View On Website")
                 
@@ -21,8 +28,19 @@ struct ViewOnWebsiteButton: View {
                 
                 .cornerRadius(10.0)
             
-        })
+        }).fullScreenCover(isPresented: $show) {
+            OpenSafari().edgesIgnoringSafeArea(.all).background(Color.white)
+
+        }
     }
 }
+
+struct ViewOnWebsiteButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewOnWebsiteButton()
+    }
+}
+
+
 
 

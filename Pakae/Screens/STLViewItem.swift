@@ -69,8 +69,9 @@ struct STLViewItem: View {
                         HStack{
                             
                             Text("Rp 749,900")
-                                .font(.custom("Poppins-Regular", size: 15))
+                                .font(.custom("Poppins-Regular", size: 17))
                                 .foregroundColor(.gray)
+                                .padding(.top,1)
                             
                             Spacer()
                         }
@@ -83,7 +84,8 @@ struct STLViewItem: View {
                 HStack{
                     
                     Text("Product Description")
-                        .font(.custom("Poppins-SemiBold", size: 20))
+                        .font(.custom("Poppins-SemiBold", size: 17))
+                        .padding(.top,4)
                     Spacer()
                 }.frame(width: 350)
                 .offset(y: -20)
@@ -92,6 +94,7 @@ struct STLViewItem: View {
                     
                     Text("The night that’s become dark again, My room that’s all square and straight, Feels like I’m trapped in it again, At that moment, something knocks on my window, The moonlight that shines on me, And curls around me")
                         .font(.custom("Poppins-Regular", size: 15))
+                        .padding(.top,1)
                     
                     Spacer()
                 }.frame(width: 350)
@@ -111,6 +114,52 @@ struct STLViewItem: View {
             }.offset(y: -75)
         }
     }
+}
+
+class getData : ObservableObject {
+
+    @Published var data = [Type]()
+    @Published var count = 1
+
+    init() {
+
+       loadData()
+    }
+    
+    func loadData(){
+//        let url = "http://18.140.3.202:8080/api/v1/user/style"
+
+//        let request : URLRequest = URLRequest(url: url)
+//
+//        let session = URLSession(configuration: .default)
+//
+//        let body : [String : cloth] = ["clothes" : clothes]
+//
+//        request.httpMethod = "POST"
+//        request.setValue(forHTTPHeaderField: "Content-Type")
+//        request.setValue("Bearer \(accessToken)",forHTTPHeaderField: "Authorization")
+//        request.httpBody = body
+
+//        session.dataTask(with: request) { (body, response, err) in
+//            if err! nil{
+//                print((err?.localizedDescription)!)
+//                return
+//            }
+//        }
+        
+    }
+}
+
+struct STLViewItemResults : Decodable {
+    
+    var results : Response
+}
+
+struct STLViewItemResponse : Decodable {
+    
+    var image : String
+    var price : String
+    var name : String
 }
 
 struct STLViewItem_Previews: PreviewProvider {
