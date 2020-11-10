@@ -45,7 +45,7 @@ struct CustomCameraView: View {
         NavigationView{
             ZStack(alignment:.bottom){
                 
-                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url, flag1: flag, StyleData: $styledata)
+//                CustomCameraRepresentable(image: self.$image, didTapCapture: $didTapCapture,Image_url: $url, flag1: flag, StyleData: $styledata)
                 
                 VStack{
                     Spacer()
@@ -98,7 +98,9 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         // BUTTON GALLERY
-                        Image(systemName: "photo").font(.largeTitle)
+                        Image(systemName: "photo")
+//                            .resizable()
+                            .font(.largeTitle)
                             .background(Color.red)
                             .foregroundColor(.white)
                             .clipShape(Rectangle())
@@ -114,13 +116,14 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         
-                        // BUTTON JEPRET
+//                         BUTTON JEPRET
                         CameraCaptureButtonView().onTapGesture {
-                            
+
                             self.didTapCapture = true
                             self.isActive = true
-                            
-                            
+                            print("kepencet")
+
+
                         }.offset(y: -25)
                         
                         NavigationLink("", destination: MLDetection(url:url, styledata: styledata), isActive: self.$isActive)
@@ -128,7 +131,9 @@ struct CustomCameraView: View {
                         Spacer()
                         
                         // BUTTON ROTATE
-                        Image("Celana").font(.largeTitle)
+                        Image("RotateCamera")
+                            .resizable()
+                            .font(.largeTitle)
                             .frame(width: 20, height: 20)
                             .clipShape(Rectangle())
                             .offset(y: -25)
@@ -140,8 +145,6 @@ struct CustomCameraView: View {
                         Spacer()
                         
                     }.edgesIgnoringSafeArea(.all)
-                    
-                    
                 }
             }.navigationBarHidden(true).background(Color.black)
             

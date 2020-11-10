@@ -71,6 +71,8 @@ struct MLDetection: View {
                 
                 Button(action: {
                     let data = CameraSendModel(id: styledata.id, created_at: styledata.created_at, updated_at: styledata.updated_at, title: name, issuer: styledata.issuer, issuer_category: styledata.issuer_category, img_url: styledata.img_url, tags: styledata.tags, cloth_category: styledata.cloth_category, cloth_type: styledata.cloth_type, main_tags: styledata.main_tags)
+                    
+                    print(data)
                    
                     userAuth.send_databaju(data: data)
                 }, label: {

@@ -59,7 +59,9 @@ struct CameraViewCustomButton: View {
                 Spacer()
                 
                 // BUTTON JEPRET
-                Image("Shutter").font(.largeTitle)
+                Image("Shutter")
+                    .resizable()
+                    .font(.largeTitle)
                     .padding(30)
                     .frame(width: 80, height: 80)
                     .clipShape(Circle())
@@ -68,8 +70,10 @@ struct CameraViewCustomButton: View {
                 Spacer()
                 
                 // BUTTON ROTATE
-                Image("Celana").font(.largeTitle)
-                    .frame(width: 50, height: 50)
+                Image("RotateCamera")
+                    .resizable()
+                    .font(.largeTitle)
+                    .frame(width: 20, height: 20)
                     .clipShape(Rectangle())
                     .offset(x:4, y: -60)
                 

@@ -70,11 +70,14 @@ class HTTPClient : ObservableObject{
     }
     
     func send_databaju(data: CameraSendModel){
-        guard let url = URL(string: "http://18.140.3.202:8080/api/v1/user/get-user-wardrobe") else{
+        let tapCount = UserDefaults.standard.string(forKey: "access_token")
+
+        guard let url = URL(string: "http://18.140.3.202:8080/api/v1/user/save-image-to-wardrobe") else{
             return
         }
-
-        let body : [String : CameraSendModel] = ["clothes": data]
+ 
+//        let body : [String : CameraSendModel] = ["clothes": data]
+        let body = data
 
         guard let finalbody = try? JSONEncoder().encode(body) else{
             return
@@ -85,16 +88,19 @@ class HTTPClient : ObservableObject{
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         request.httpBody = finalbody
-
+                
+        let accessToken = "\(tapCount!)"
+        request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
         URLSession.shared.dataTask(with: request){(data, response, error) in
             guard let data = data, error == nil else {return}
 
-            let result = try? JSONDecoder().decode(UserSignInModel.self, from: data)
+            let result = try? JSONDecoder().decode(CameraSendModel.self, from: data)
 
             if let result = result {
                 DispatchQueue.main.async {
-                    if(!result.access_token.isEmpty){
-                        self.isLoggedin = true
+                    if(!result.id.isEmpty){
+//                        self.isLoggedin = true
 
                         print("Success Kirim Bang")
                     }
@@ -102,7 +108,7 @@ class HTTPClient : ObservableObject{
                 }
             }else{
                 DispatchQueue.main.async {
-                    self.isCorrect = false
+//                    self.isCorrect = false
                 }
             }
 

@@ -10,7 +10,8 @@ import SwiftUI
 struct CameraCaptureButtonView: View {
         
     var body: some View {
-        Image("Shutter").font(.largeTitle)
+        Image("Shutter").resizable()
+            .font(.largeTitle)
             .padding(30)
             .frame(width: 80, height: 80)
             .clipShape(Circle())
